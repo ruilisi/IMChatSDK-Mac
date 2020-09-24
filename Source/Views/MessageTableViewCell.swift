@@ -13,7 +13,7 @@ class MessageTableViewCell: NSView {
     let label = NSLabel()
     let time = NSLabel()
     let bgimage = NSImageView()
-    let loadingLottie = AnimationView(name: "msgloading", bundle: Resources.bundle, imageProvider: nil, animationCache: nil)
+    let loadingLottie = AnimationView(name: "msgloading")
     
     var timeInt = Int()
     var messageID = String()
@@ -49,14 +49,9 @@ class MessageTableViewCell: NSView {
         label.textColor = .white
         time.textColor = NSColor(red: 1, green: 1, blue: 1, alpha: 0.5)
         
-        if #available(OSX 10.11, *) {
-            labelfont = NSFont.systemFont(ofSize: 20, weight: .regular)
-            time.font = NSFont.systemFont(ofSize: 13, weight: .regular)
-        } else {
-            // Fallback on earlier versions
-            labelfont = NSFont.systemFont(ofSize: 20)
-            time.font = NSFont.systemFont(ofSize: 13)
-        }
+        labelfont = NSFont.systemFont(ofSize: 15, weight: .regular)
+        time.font = NSFont.systemFont(ofSize: 12, weight: .regular)
+        
         label.font = labelfont
     }
     
@@ -77,7 +72,7 @@ class MessageTableViewCell: NSView {
         label.stringValue = "\(message)"
         
         
-        label.frame = getLabelSize(text: message, attributes: [.font: label], textWidth: Int(vWidth * 0.6))
+        label.frame = getLabelSize(text: message, attributes: [.font: labelfont], textWidth: Int(vWidth * 0.6))
         
         let labelWidth = label.frame.width
         let labelHeight = label.frame.height
@@ -106,14 +101,28 @@ class MessageTableViewCell: NSView {
             bgimage.frame = CGRect(x: 10, y: timebottom, width: bgWidth, height: bgHeight)
             label.frame = CGRect(x: 30, y: (bgimage.bounds.height - labelHeight) * 0.5 + timebottom, width: labelWidth, height: labelHeight)
             rowHeight = bgimage.bottom + 20.0
+            
+            bgimage.translatesAutoresizingMaskIntoConstraints = false
+            bgimage.leftAnchor.constraint(equalTo: self.leftAnchor, constant: 10).isActive = true
+            
+            label.translatesAutoresizingMaskIntoConstraints = false
+            label.centerYAnchor.constraint(equalTo: bgimage.centerYAnchor).isActive = true
+            label.centerXAnchor.constraint(equalTo: bgimage.centerXAnchor).isActive = true
         } else {
             sendBG?.resizingMode = .stretch
             sendBG?.capInsets = sendEdge
             bgimage.image = sendBG
             
-            bgimage.frame = CGRect(x: vWidth - bgWidth - 10, y: timebottom, width: bgWidth, height: bgHeight)
+            bgimage.frame = CGRect(x: 0, y: timebottom, width: bgWidth, height: bgHeight)
             label.frame = CGRect(x: bgimage.frame.origin.x + 20, y: (bgimage.bounds.height - labelHeight) * 0.5 + timebottom, width: labelWidth, height: labelHeight)
             rowHeight = bgimage.bottom + 20.0
+            
+            bgimage.translatesAutoresizingMaskIntoConstraints = false
+            bgimage.rightAnchor.constraint(equalTo: self.rightAnchor, constant: -10).isActive = true
+            
+            label.translatesAutoresizingMaskIntoConstraints = false
+            label.centerYAnchor.constraint(equalTo: bgimage.centerYAnchor).isActive = true
+            label.centerXAnchor.constraint(equalTo: bgimage.centerXAnchor).isActive = true
             
             loadingLottie.translatesAutoresizingMaskIntoConstraints = false
             self.addConstraints([

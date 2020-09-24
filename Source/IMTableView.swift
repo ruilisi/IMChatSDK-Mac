@@ -50,10 +50,11 @@ class IMTableView: NSView {
         self.addConstraints([
                                 .init(item: scrollView, attribute: .centerY, relatedBy: .equal, toItem: self, attribute: .centerY, multiplier: 1, constant: 0),
                                 .init(item: scrollView, attribute: .centerX, relatedBy: .equal, toItem: self, attribute: .centerX, multiplier: 1, constant: 0),
-                                .init(item: scrollView, attribute: .top, relatedBy: .equal, toItem: self, attribute: .top, multiplier: 1, constant: 0),
-                                .init(item: scrollView, attribute: .bottom, relatedBy: .equal, toItem: self, attribute: .bottom, multiplier: 1, constant: 0)])
+                                .init(item: scrollView, attribute: .width, relatedBy: .equal, toItem: self, attribute: .width, multiplier: 1, constant: 0),
+                                .init(item: scrollView, attribute: .height, relatedBy: .equal, toItem: self, attribute: .height, multiplier: 1, constant: 0)])
         
         scrollView.documentView = messageTable
+        scrollView.drawsBackground = false
         
         messageTable.delegate = self
         messageTable.dataSource = self
@@ -61,15 +62,18 @@ class IMTableView: NSView {
         messageTable.headerView = nil
         messageTable.intercellSpacing = NSSize(width: 0, height: 10)
         
+        let column = NSTableColumn()
+        column.width = 300
+        messageTable.addTableColumn(column)
+        
         messageTable.focusRingType = .none
         messageTable.allowsTypeSelect = false
         messageTable.selectionHighlightStyle = .none
         
-        for (index, _) in datas.enumerated() {
-            let cell = NSView()
-//            cell.setContent(msgID: "123123", name: "123123", message: item, timeInterval: 100000200, isSelf: index % 2 == 0 , ishideTime: true)
-            cell.backgroundColor = index % 2 == 0 ? .blue : .yellow
-            testcells.append(cell)
+        for (index, item) in datas.enumerated() {
+            let cell = MessageTableViewCell()
+            cell.setContent(msgID: "123123", name: "123123", message: item, timeInterval: 100000200, isSelf: index % 2 == 0 , ishideTime: true)
+            cells.append(cell)
         }
         messageTable.reloadData()
     }
@@ -82,15 +86,15 @@ class IMTableView: NSView {
 extension IMTableView: NSTableViewDelegate, NSTableViewDataSource {
     
     func tableView(_ tableView: NSTableView, heightOfRow row: Int) -> CGFloat {
-        return 30
+        print("RowHeight: \(cells[row].rowHeight)")
+        return cells[row].rowHeight
     }
     
     func tableView(_ tableView: NSTableView, viewFor tableColumn: NSTableColumn?, row: Int) -> NSView? {
-        let res = testcells[row]
-        return res
+        return cells[row]
     }
     
     func numberOfRows(in tableView: NSTableView) -> Int {
-        return testcells.count
+        return cells.count
     }
 }

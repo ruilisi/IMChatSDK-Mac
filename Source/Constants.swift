@@ -17,9 +17,9 @@ func createID(_ seed: String = unmistakableChars) -> String {
 }
 
 public let datas: [String] = [
-    "然奥冲大餐掉欧塞onof诺达覅偶奇",
-    "This is a test Label",
-    "This is a test LabelThis is a test LabelThis is a test LabelThis is a test LabelThis is a test Label",
-    "This is a test LabelThis is a test LabelThis is a test LabelThis is a test LabelThis is a test LabelThis is a test LabelThis is a test LabelThis is a test LabelThis is a test LabelThis is a test Label",
-    "This is a test LabelThis is a test LabelThis is a test LabelThis is a test Label",
+    "11111",
+    "222222222222222",
+    "333333333333333333333333333",
+    "4444444444444444444444444444444444",
+    "55555555555555555555555555555555555555555",
     "Ssss"]
