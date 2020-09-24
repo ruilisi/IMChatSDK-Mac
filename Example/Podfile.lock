@@ -1,0 +1,31 @@
+PODS:
+  - Alamofire (4.8.0)
+  - IMChatSDK-Mac (1.0.0):
+    - Alamofire (= 4.8.0)
+    - Starscream
+    - SwiftyJSON
+  - Starscream (4.0.4)
+  - SwiftyJSON (5.0.0)
+
+DEPENDENCIES:
+  - IMChatSDK-Mac (from `../`)
+
+SPEC REPOS:
+  trunk:
+    - Alamofire
+    - Starscream
+    - SwiftyJSON
+
+EXTERNAL SOURCES:
+  IMChatSDK-Mac:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  Alamofire: 3ec537f71edc9804815215393ae2b1a8ea33a844
+  IMChatSDK-Mac: ba8c89f13fa26588b9a6eff2269c89ed06f32f24
+  Starscream: 5178aed56b316f13fa3bc55694e583d35dd414d9
+  SwiftyJSON: 36413e04c44ee145039d332b4f4e2d3e8d6c4db7
+
+PODFILE CHECKSUM: dfac2dad496312824e4ccb513da02d07cdc3ef20
+
+COCOAPODS: 1.9.1

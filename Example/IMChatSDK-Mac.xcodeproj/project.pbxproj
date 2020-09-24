@@ -29,13 +29,13 @@
 /* Begin PBXFileReference section */
 		075907F79A99A3E6693391B5 /* Pods_IMChatSDK_Mac_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_IMChatSDK_Mac_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		09CA668ACD85D393C0E7B0A0 /* Pods-IMChatSDK-Mac_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IMChatSDK-Mac_Example.release.xcconfig"; path = "Target Support Files/Pods-IMChatSDK-Mac_Example/Pods-IMChatSDK-Mac_Example.release.xcconfig"; sourceTree = "<group>"; };
-		282E59F1DC27B1B422A208A9 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		282E59F1DC27B1B422A208A9 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		5044F3DCB7DF2A580D7BDCFB /* Pods-IMChatSDK-Mac_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IMChatSDK-Mac_Example.debug.xcconfig"; path = "Target Support Files/Pods-IMChatSDK-Mac_Example/Pods-IMChatSDK-Mac_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		7174D30C32F3C49D52BF4BA0 /* Pods_IMChatSDK_Mac_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_IMChatSDK_Mac_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7396BF736645BE6AD0C9CCF7 /* Pods-IMChatSDK-Mac_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IMChatSDK-Mac_Tests.release.xcconfig"; path = "Target Support Files/Pods-IMChatSDK-Mac_Tests/Pods-IMChatSDK-Mac_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		73B39115E9A695C1430DAF41 /* Pods-IMChatSDK-Mac_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IMChatSDK-Mac_Tests.debug.xcconfig"; path = "Target Support Files/Pods-IMChatSDK-Mac_Tests/Pods-IMChatSDK-Mac_Tests.debug.xcconfig"; sourceTree = "<group>"; };
-		A198EC77AE8914F0636CAFAC /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; name = README.md; path = ../README.md; sourceTree = "<group>"; };
-		D7C836BA3995936F3733AA84 /* IMChatSDK-Mac.podspec */ = {isa = PBXFileReference; includeInIndex = 1; name = "IMChatSDK-Mac.podspec"; path = "../IMChatSDK-Mac.podspec"; sourceTree = "<group>"; };
+		A198EC77AE8914F0636CAFAC /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		D7C836BA3995936F3733AA84 /* IMChatSDK-Mac.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = "IMChatSDK-Mac.podspec"; path = "../IMChatSDK-Mac.podspec"; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		ED83F67820348A760038D96B /* IMChatSDK-Mac_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "IMChatSDK-Mac_Example.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED83F67B20348A760038D96B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		ED83F67D20348A760038D96B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -138,7 +138,6 @@
 				73B39115E9A695C1430DAF41 /* Pods-IMChatSDK-Mac_Tests.debug.xcconfig */,
 				7396BF736645BE6AD0C9CCF7 /* Pods-IMChatSDK-Mac_Tests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -250,11 +249,17 @@
 			);
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-IMChatSDK-Mac_Example/Pods-IMChatSDK-Mac_Example-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/IMChatSDK-Mac/IMChatSDK_Mac.framework",
+				"${BUILT_PRODUCTS_DIR}/Starscream/Starscream.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IMChatSDK_Mac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Starscream.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -465,7 +470,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.IMChatSDK-Mac";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
@@ -481,7 +486,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.IMChatSDK-Mac";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
 		};
@@ -497,7 +502,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.IMChatSDK-Mac-Tests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 				TEST_HOST = "";
 			};
 			name = Debug;
@@ -514,7 +519,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.IMChatSDK-Mac-Tests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 				TEST_HOST = "";
 			};
 			name = Release;

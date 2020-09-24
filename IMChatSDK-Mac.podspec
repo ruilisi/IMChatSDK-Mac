@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'IMChatSDK-Mac'
-  s.version          = '0.1.0'
+  s.version          = '1.0.0'
   s.summary          = 'A short description of IMChatSDK-Mac.'
 
 # This description is used to generate tags and improve search results.
@@ -21,17 +21,24 @@ Pod::Spec.new do |s|
 TODO: Add long description of the pod here.
                        DESC
 
-  s.homepage         = 'https://github.com/Thisismy0312/IMChatSDK-Mac'
+  s.homepage         = 'https://github.com/ruilisi/IMChatSDK-Mac'
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'Thisismy0312' => 'qq867327466@163.com' }
-  s.source           = { :git => 'https://github.com/Thisismy0312/IMChatSDK-Mac.git', :tag => s.version.to_s }
+  s.source           = { :git => 'https://github.com/ruilisi/IMChatSDK-Mac.git', :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
   s.platform = :osx
   s.osx.deployment_target = "10.10"
 
-  s.source_files = 'IMChatSDK-Mac/Classes/**/*'
+  s.source_files = ['Source/Core/*.{swift}',
+                    'Source/*.{swift}',
+                    'Source/Http/*.{swift}']
+  s.swift_version= '5.0'
+  
+  s.dependency 'Starscream'
+  s.dependency 'SwiftyJSON'
+  s.dependency 'Alamofire', '4.8.0'
 
   # s.resource_bundles = {
   #   'IMChatSDK-Mac' => ['IMChatSDK-Mac/Assets/*.png']
