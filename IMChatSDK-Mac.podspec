@@ -44,10 +44,6 @@ TODO: Add long description of the pod here.
   s.dependency 'SwiftyJSON'
   s.dependency 'Alamofire', '4.8.0'
 
-  # s.resource_bundles = {
-  #   'IMChatSDK-Mac' => ['IMChatSDK-Mac/Assets/*.png']
-  # }
-
   # s.public_header_files = 'Pod/Classes/**/*.h'
   # s.frameworks = 'Cocoa'
   # s.dependency 'AFNetworking', '~> 2.3'
