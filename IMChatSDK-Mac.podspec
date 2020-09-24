@@ -35,6 +35,9 @@ TODO: Add long description of the pod here.
                     'Source/*.{swift}',
                     'Source/Http/*.{swift}']
   s.swift_version= '5.0'
+  s.resource_bundles = {
+    'IMChatSDK' => ['Resources/*.{xcassets,json}']
+  }
   
   s.dependency 'Starscream'
   s.dependency 'SwiftyJSON'

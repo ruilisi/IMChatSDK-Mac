@@ -24,6 +24,11 @@
     "Source/Http/*.{swift}"
   ],
   "swift_versions": "5.0",
+  "resource_bundles": {
+    "IMChatSDK": [
+      "Resources/*.{xcassets,json}"
+    ]
+  },
   "dependencies": {
     "Starscream": [
 

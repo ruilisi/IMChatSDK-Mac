@@ -7,69 +7,72 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		017AB6965CC7E7299C05010B047F85F1 /* WebSocket.swift in Sources */ = {isa = PBXBuildFile; fileRef = E44E1C450036366D11FE2996CC1EEC8A /* WebSocket.swift */; };
-		0BB256BD4CB000FD0AD2D24D21F1940F /* Starscream-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AB6F4F77C99DAB3A379E06603F4B185 /* Starscream-dummy.m */; };
+		014B8E7E679F01B2C717E2D7525A67C6 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F1661AB09B22377267ABBA01DC8AECB /* Cocoa.framework */; };
 		0C5E11DE24DAA737704B355F5F2F3426 /* ParameterEncoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE5304A58539142F475B6FBEDE099A56 /* ParameterEncoding.swift */; };
-		0CDC4D1C8CBFDE87AB4B8E406A64F391 /* IMChatSDK-Mac-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = C4920B539D909612176461D883BFF3A1 /* IMChatSDK-Mac-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		132E0F619E4338E5D1B27E4C72076B3F /* Notifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = 214FAD9A1DDE490A6231B8CC20D4590F /* Notifications.swift */; };
 		1945CD5D63A1C164AEAAA9A33E85571E /* Alamofire-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = A489630D8C08DE244A125AC1EB0E14EB /* Alamofire-dummy.m */; };
 		1986B50C74F1697EA43F68335C93CEB3 /* MultipartFormData.swift in Sources */ = {isa = PBXBuildFile; fileRef = A82A74C2BE037758A040487165329BA9 /* MultipartFormData.swift */; };
-		1A014E11497A4245B8596C247D51BA10 /* NativeEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAD2C0D24D18308CA42DE5D54BBF74B6 /* NativeEngine.swift */; };
+		225B8AD2315B43BB912F8EB4645E66B1 /* Compression.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5FF37C8DFD66E144772FD9F9325B23B /* Compression.swift */; };
+		22BA8773E30184644EA6D780E010E5E9 /* FoundationHTTPServerHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFC9AD38B3AA189D2A715087AD14FAA7 /* FoundationHTTPServerHandler.swift */; };
+		22FC76813C5D6E50E6676EDFF616DE51 /* Transport.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF29D2D6BC2EA0661A171193555E5F3E /* Transport.swift */; };
+		237DEDFD76299E836FC3ADABA7AD1387 /* FrameCollector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EFCAB7CB5832CFAB615F3711AFCFEAA /* FrameCollector.swift */; };
 		2C61B040BA6A9A7AE66C4D9BA26D5520 /* SessionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C9909913304AB430F0CA29AAC2886CC /* SessionDelegate.swift */; };
-		2FBD9E7626644AC6E7DD07321D6E1B34 /* SwiftyJSON-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = A3DBB4CC016C7FE3CA7BDF36FEE45D32 /* SwiftyJSON-dummy.m */; };
-		32701D4400BA5147EA76BA59B5422683 /* WSEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3018EB9C78DE80CDD905B523389DCB8D /* WSEngine.swift */; };
-		334D67A75537512CF2305B3A15737711 /* Compression.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5FF37C8DFD66E144772FD9F9325B23B /* Compression.swift */; };
+		2C74D72710309CD89A9B3B96588018DF /* WebSocketServer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 448386888511C7B353B4A69B921E3AC1 /* WebSocketServer.swift */; };
+		329104B43067F89923668250F55DDE6F /* TCPTransport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 359F65B1C9756DF5C42C05669056C41A /* TCPTransport.swift */; };
+		3484A3158C5E6944214E51C84A455D1C /* HttpManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 860A004DBEC204A72F6540B5A54F5694 /* HttpManager.swift */; };
 		3571F958A3907B3A806E62D50C2550D4 /* NetworkReachabilityManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7447966A025B63CC1A08F82850DBBA90 /* NetworkReachabilityManager.swift */; };
-		3A21C410A494F80DB7FC106B5D249048 /* HttpManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 456DBFDBB21DB594FC4AC4DB07CF68A1 /* HttpManager.swift */; };
-		42A89D2C1156919808119AFEF20F1843 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F1661AB09B22377267ABBA01DC8AECB /* Cocoa.framework */; };
-		438441797C2A4696F10012CE38BB139E /* StringHTTPHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF3DD9C332EC68B6DC1E140B530FEED5 /* StringHTTPHandler.swift */; };
-		48CC98B4E84504304E05C494E651CD65 /* WSCompression.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFA59B8B9FB1A50E513D9B833E30247E /* WSCompression.swift */; };
-		533D2EE38FF13F34D1E539D02EA210E1 /* IMChatSDK-Mac-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = C3CC3E148961991EAE40197C9AE16DBA /* IMChatSDK-Mac-dummy.m */; };
+		38E36C796A5ED0896CB5C763C28E45B0 /* IMChatSDK.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 845F02400C6523D383FB7390DBE87B8F /* IMChatSDK.bundle */; };
+		43183919FD54AAD0E9771FF64FE020C7 /* WebSocketHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B2D5A1078305AE93B8CD63E9175CC1A /* WebSocketHelper.swift */; };
+		44B923E146E7E93703AA6203F48BA863 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 71F4C5F79BDC4D72B4259BDE51574FF1 /* Images.xcassets */; };
 		53791F5E5F07400F92CFDFC89A432305 /* Validation.swift in Sources */ = {isa = PBXBuildFile; fileRef = B913C700D36F16491BCBD41EAE896F0A /* Validation.swift */; };
-		5A2266090F929F9EE436C0A42CBD3265 /* Data+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99EE1C350CEC8EB901BCBCE2A992565C /* Data+Extensions.swift */; };
-		60BD4EA25FF1281CE111FC29A851748E /* WebSocketHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 514513B5765BD897F5D8235B0B413DC2 /* WebSocketHelper.swift */; };
+		5B5E60DD446AA8016FA9137F2882FF95 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F1661AB09B22377267ABBA01DC8AECB /* Cocoa.framework */; };
 		64744C911253C3E01461FAD7C935C8D7 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = B38C1339E2FA81A79CB5ABDDA0BB084F /* Result.swift */; };
-		662E4726F8786A94AAC7924C34305741 /* Starscream-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = AEABEDB46FE9FC2A96F6C72BB7717E8D /* Starscream-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		674E5A081A4DA4B6AD04C01BF19650DD /* IMChatSDK-Mac-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 2E7DBF75FDC86EEA1A09220B3F8EFFCD /* IMChatSDK-Mac-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		71189CC36E47464B5AE5829FA9F3B825 /* Pods-IMChatSDK-Mac_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = E4763F084C944C52B03D290D004C540D /* Pods-IMChatSDK-Mac_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		7191BFB6707655BABECFF30C93FC3028 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F1661AB09B22377267ABBA01DC8AECB /* Cocoa.framework */; };
-		7CCBA47CA460A2D0C4E699F4A6BF3D8D /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C7D130EEEF55CDE53FB1E284B453730F /* Alamofire.framework */; };
+		781036DE3C69AAADD9A697DD6A671F11 /* Data+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99EE1C350CEC8EB901BCBCE2A992565C /* Data+Extensions.swift */; };
+		7D6880C076213D093D9674B18A2FD42D /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F8C51F7F129A685B2F83468B19664AD8 /* SwiftyJSON.framework */; };
 		83956E20859CDBBE7BC38ABADE0170FB /* AFError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 940ABDFEF26B64449EE525675C5C8FA5 /* AFError.swift */; };
-		895693D858995724AAA3C0EECCA20440 /* FoundationHTTPHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28926AA225394F20B97FEDEEC896C62F /* FoundationHTTPHandler.swift */; };
 		895D4F86D2CCD53B88E72FD7116F2C46 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F1661AB09B22377267ABBA01DC8AECB /* Cocoa.framework */; };
 		931BBB8230A25161D5C37528A8F9FECF /* SessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AED92D57660F5601C36B3B2C34DA986C /* SessionManager.swift */; };
 		933FDA5970AA525D6CB92BFEBA2BAB4A /* Timeline.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08E8BB0C07657C9054FCB80D38388F92 /* Timeline.swift */; };
+		952C6BCE6A6D322FF8CF99156ABDF309 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = F79D0CFA2DB6360C822062D14DE1F43E /* Constants.swift */; };
 		98A929C8E9012AB167672714FFD2113C /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = 088EEEE6E8E887961F59BF9570C45CBB /* Request.swift */; };
-		A059C4621917963D5E019F73D002DCA4 /* FrameCollector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EFCAB7CB5832CFAB615F3711AFCFEAA /* FrameCollector.swift */; };
-		A077C7ED1F85845F9767C67C98A53566 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F1661AB09B22377267ABBA01DC8AECB /* Cocoa.framework */; };
-		A19C33F458A820A629D9BE7020EB9C99 /* WebSocketServer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 448386888511C7B353B4A69B921E3AC1 /* WebSocketServer.swift */; };
-		A484C32882151ED1E107783C7CD3CB4D /* Engine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58522F98961A10F6679B0B29557ADCDA /* Engine.swift */; };
-		A4F0317354EAF80BBEE54E854FAA0902 /* FoundationSecurity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6463FE4ACEB6433F1F21BAA36B7871C0 /* FoundationSecurity.swift */; };
-		A8FBD496D883354BA503B4305D7BB514 /* Framer.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCA00FC4EB040D1C39CE1543A13AD903 /* Framer.swift */; };
-		AD771ED846CBC7354D1266D9ADCF9CB1 /* FoundationHTTPServerHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFC9AD38B3AA189D2A715087AD14FAA7 /* FoundationHTTPServerHandler.swift */; };
+		9AAE6FABA0B85A448BF54D45BFBE1791 /* Server.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D4B07AE181BC35BEC059CA86D3F4C26 /* Server.swift */; };
+		9D25507FFFCF62BF930E3A3C63A52D8F /* FoundationHTTPHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28926AA225394F20B97FEDEEC896C62F /* FoundationHTTPHandler.swift */; };
+		9EB72E98EF211979FAAE976EDD346602 /* Framer.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCA00FC4EB040D1C39CE1543A13AD903 /* Framer.swift */; };
+		A16964BCC25C10DEFB0B31BD33C954F4 /* WebSocket.swift in Sources */ = {isa = PBXBuildFile; fileRef = E44E1C450036366D11FE2996CC1EEC8A /* WebSocket.swift */; };
+		AA05CAF095109E47A48833DEC6C2DF4F /* NativeEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAD2C0D24D18308CA42DE5D54BBF74B6 /* NativeEngine.swift */; };
+		AAD9819DFCBB8700A0C96503B0E19B37 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C7D130EEEF55CDE53FB1E284B453730F /* Alamofire.framework */; };
+		AC8CAB95815B2216A1B6A15762851E4B /* IMChatSDK-Mac-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 74BB4FDDE984C4DA9A835AB71B023A67 /* IMChatSDK-Mac-dummy.m */; };
 		AFC64B1097F7355FF423D6A73E9C7210 /* TaskDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF08A726EB2BB35E2B98A0703DA472D5 /* TaskDelegate.swift */; };
-		B30757865C69F1C89DA37C0247DC15EE /* FoundationTransport.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0456DD9ECE2218D5AEC51642EAF5836 /* FoundationTransport.swift */; };
-		B538260F22C0670D03A212DA47B97B8F /* HTTPHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08D1C90B44B9DB5BCB2F828B840AED18 /* HTTPHandler.swift */; };
+		B7401A0F3CFD05D91751431A7C6042B2 /* SwiftyJSON-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = A3DBB4CC016C7FE3CA7BDF36FEE45D32 /* SwiftyJSON-dummy.m */; };
+		BB82BF61845F852BF86630E255E85B62 /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 368A9FFC6E39FED29FA74782E9F274F1 /* SwiftyJSON.swift */; };
+		BC657677BF2DD1682A77CFDA1784E6A3 /* HTTPHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08D1C90B44B9DB5BCB2F828B840AED18 /* HTTPHandler.swift */; };
 		BD446A8F13B39188DC11029853865468 /* Pods-IMChatSDK-Mac_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = D8ED56766912ABE06276C8395761454C /* Pods-IMChatSDK-Mac_Example-dummy.m */; };
 		BEE6B677416CA71C981D1D3F60B18C96 /* Alamofire.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED8C1052C132345AF922C14D7BEAA6BD /* Alamofire.swift */; };
-		C1393BD4201C70CB32DF08C36E529136 /* Transport.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF29D2D6BC2EA0661A171193555E5F3E /* Transport.swift */; };
-		C40F9256CBEF34AC1A1A1AA504337647 /* Security.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CEA7E30A7D9635BA9BE32DE146278AF /* Security.swift */; };
-		CBDBB762798134F414140C6F259C3148 /* TCPTransport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 359F65B1C9756DF5C42C05669056C41A /* TCPTransport.swift */; };
-		CDFD8A71F14989B5D379AC73D25F257F /* HttpUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6EDFD5E7E79010D548B3CC4DD87767C /* HttpUtil.swift */; };
-		CF9D54C62438DFD8AAD5F83EFC42D4B1 /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 368A9FFC6E39FED29FA74782E9F274F1 /* SwiftyJSON.swift */; };
+		C1C77801D51E45A76D08B0916EC4717D /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F1661AB09B22377267ABBA01DC8AECB /* Cocoa.framework */; };
+		C2D43B786F2AA9C58E16CBDE74B08E77 /* WSCompression.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFA59B8B9FB1A50E513D9B833E30247E /* WSCompression.swift */; };
+		C9041C64ECCDAF2A22F76EB00DB94815 /* Starscream.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9EEE8C5AF0040F4B313FBF52ABF44A47 /* Starscream.framework */; };
+		D07FAAA683AEE036D11FE98080954361 /* Starscream-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AB6F4F77C99DAB3A379E06603F4B185 /* Starscream-dummy.m */; };
+		D083C015C1210BD695A90726534BEBD6 /* FoundationSecurity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6463FE4ACEB6433F1F21BAA36B7871C0 /* FoundationSecurity.swift */; };
+		D2C60CF6F703F56DE25327367CB04EFF /* StringHTTPHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF3DD9C332EC68B6DC1E140B530FEED5 /* StringHTTPHandler.swift */; };
 		D3D8C379C6E4FB487E5ABD6800AD7B7E /* DispatchQueue+Alamofire.swift in Sources */ = {isa = PBXBuildFile; fileRef = C56D5B74E3B9A7D9AECC3162675190B0 /* DispatchQueue+Alamofire.swift */; };
 		D65C254F5ABF2CB5ECEE50FE8F8E1A80 /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0807DA2F68A83F7EB7CA309CA369140 /* Response.swift */; };
-		DE5CC35FB3007294C985FA448A6398C5 /* Starscream.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9EEE8C5AF0040F4B313FBF52ABF44A47 /* Starscream.framework */; };
-		DF5620E91F203B6E8B52D71A787EE243 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F1661AB09B22377267ABBA01DC8AECB /* Cocoa.framework */; };
-		E18250A20D8384A5CE2E0EBEF429B877 /* SwiftyJSON-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 0F25527666E0548D5298F7C6B2DCC8EC /* SwiftyJSON-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D8759390D0A4E062A6EEF6EFE722001B /* SwiftyJSON-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 0F25527666E0548D5298F7C6B2DCC8EC /* SwiftyJSON-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D8ACCB64A1EA08F5C7861D12BFE340C9 /* HttpUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FE6BC65F7E5C9BF522A23651235FD7A /* HttpUtil.swift */; };
+		D8B55A8548D6422D3FE385D2A65E3754 /* Starscream-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = AEABEDB46FE9FC2A96F6C72BB7717E8D /* Starscream-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DF5045212BAE0CE2902B3D5ECED9014F /* msgloading.json in Resources */ = {isa = PBXBuildFile; fileRef = B925B7893A251139ED5DEC8996977B5D /* msgloading.json */; };
+		DFCEBE21F5658CE058D102EBDBD4D658 /* FoundationTransport.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0456DD9ECE2218D5AEC51642EAF5836 /* FoundationTransport.swift */; };
+		DFF3232DCD4427067D35870362AA4261 /* Engine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58522F98961A10F6679B0B29557ADCDA /* Engine.swift */; };
 		E3747EC31FCCA97D75A81FC700CF7E24 /* ResponseSerialization.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3D54FE633DD36AB753213852B54CBCC /* ResponseSerialization.swift */; };
-		EFD0290097FF2199362F6E3B3700D9D9 /* Server.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D4B07AE181BC35BEC059CA86D3F4C26 /* Server.swift */; };
+		E6EAF46D27D481123A4583D6E3928E3A /* WSEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3018EB9C78DE80CDD905B523389DCB8D /* WSEngine.swift */; };
 		F13F2AA7F2E6D95A181CAB99B900D531 /* ServerTrustPolicy.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1DD24FA727021B954086EC14BA08BC9 /* ServerTrustPolicy.swift */; };
-		F370F8368B1A7C38DA5A65ED318D3FE8 /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F8C51F7F129A685B2F83468B19664AD8 /* SwiftyJSON.framework */; };
 		F7B74645E07C39771156A1FA413B98D4 /* Alamofire-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = AEC0BF78AF8C996A319EA8DE8803BEFB /* Alamofire-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		F7F13DADAC83BE187A2FD4D509F02A3B /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F1661AB09B22377267ABBA01DC8AECB /* Cocoa.framework */; };
+		FC42990E8426BE85C61C392600FD8061 /* Security.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CEA7E30A7D9635BA9BE32DE146278AF /* Security.swift */; };
 		FE9A98DD9CE37D828205B3E05D96DBFC /* Pods-IMChatSDK-Mac_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = D52F9822BD90C2F34CB7D8F56F92D1D3 /* Pods-IMChatSDK-Mac_Tests-dummy.m */; };
 		FF10ED89962D9FC0DF3A9B8181E76913 /* Pods-IMChatSDK-Mac_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 6A6374AA7CAEC40688389E157B05D9BD /* Pods-IMChatSDK-Mac_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		FFD0FB8630946280FED866C7E8828B82 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AA513CBB31FA6C4A9813A2910768A12 /* Constants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -79,13 +82,6 @@
 			proxyType = 1;
 			remoteGlobalIDString = 9B78EE4AF6AE03E79D88886319853FF7;
 			remoteInfo = Starscream;
-		};
-		328B1210DF252937EB9E9A4321EA9552 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = EAAA1AD3A8A1B59AB91319EE40752C6D;
-			remoteInfo = Alamofire;
 		};
 		436D0E83AC9E528AD401CB717CE28537 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -108,12 +104,33 @@
 			remoteGlobalIDString = B164B8D1A550314890F94317D0EE2536;
 			remoteInfo = "IMChatSDK-Mac";
 		};
-		A802B67661E8897BE9ECC8530B390615 /* PBXContainerItemProxy */ = {
+		65EE8B5FFFCF5499786BC9C41509F3C5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4A2D5C169E7F3010F114A0293B9B6EA7;
+			remoteInfo = "IMChatSDK-Mac-IMChatSDK";
+		};
+		6F0C9B8D95A075FF8A7E890BAA36FF58 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 9B78EE4AF6AE03E79D88886319853FF7;
 			remoteInfo = Starscream;
+		};
+		7C0201B679382DB3CC558206F6AB7D0B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D118A6A04828FD3CDA8640CD2B6796D2;
+			remoteInfo = SwiftyJSON;
+		};
+		8DCC57A963195A785A3F721F1787955B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EAAA1AD3A8A1B59AB91319EE40752C6D;
+			remoteInfo = Alamofire;
 		};
 		C6FCAC9E01BAAAFF5C3A384BB3D4B5BA /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -121,13 +138,6 @@
 			proxyType = 1;
 			remoteGlobalIDString = EAAA1AD3A8A1B59AB91319EE40752C6D;
 			remoteInfo = Alamofire;
-		};
-		D3960AAF0FE5B13BBBDE37B3FAA2B554 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = D118A6A04828FD3CDA8640CD2B6796D2;
-			remoteInfo = SwiftyJSON;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -139,44 +149,48 @@
 		0C9909913304AB430F0CA29AAC2886CC /* SessionDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SessionDelegate.swift; path = Source/SessionDelegate.swift; sourceTree = "<group>"; };
 		0F25527666E0548D5298F7C6B2DCC8EC /* SwiftyJSON-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftyJSON-umbrella.h"; sourceTree = "<group>"; };
 		15C1177E6430EF04D4829BB55A610747 /* Pods-IMChatSDK-Mac_Example-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-IMChatSDK-Mac_Example-Info.plist"; sourceTree = "<group>"; };
-		199F8FB86A398019CD8F18725BBEC65C /* IMChatSDK-Mac-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "IMChatSDK-Mac-Info.plist"; sourceTree = "<group>"; };
 		1B1048BA233909A803FDE696C8171F73 /* Alamofire-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Alamofire-prefix.pch"; sourceTree = "<group>"; };
 		1B5385800E0C37A6B5A1BEE5B7096E11 /* Alamofire.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Alamofire.debug.xcconfig; sourceTree = "<group>"; };
+		1C75BB5AD128FD91081DB9892DC05C7C /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
 		214FAD9A1DDE490A6231B8CC20D4590F /* Notifications.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Notifications.swift; path = Source/Notifications.swift; sourceTree = "<group>"; };
 		2239F5F5B9647E7FC9F6E2E60B67C04C /* Alamofire.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = Alamofire.modulemap; sourceTree = "<group>"; };
 		28926AA225394F20B97FEDEEC896C62F /* FoundationHTTPHandler.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FoundationHTTPHandler.swift; path = Sources/Framer/FoundationHTTPHandler.swift; sourceTree = "<group>"; };
 		2B001F46701239359AB69D60CEE79CA0 /* Pods-IMChatSDK-Mac_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-IMChatSDK-Mac_Example.modulemap"; sourceTree = "<group>"; };
+		2E7DBF75FDC86EEA1A09220B3F8EFFCD /* IMChatSDK-Mac-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "IMChatSDK-Mac-umbrella.h"; sourceTree = "<group>"; };
 		2FF95F1407B711E5B2E489A3AA0CD2F9 /* Pods-IMChatSDK-Mac_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-IMChatSDK-Mac_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		3018EB9C78DE80CDD905B523389DCB8D /* WSEngine.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = WSEngine.swift; path = Sources/Engine/WSEngine.swift; sourceTree = "<group>"; };
 		359F65B1C9756DF5C42C05669056C41A /* TCPTransport.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TCPTransport.swift; path = Sources/Transport/TCPTransport.swift; sourceTree = "<group>"; };
 		368A9FFC6E39FED29FA74782E9F274F1 /* SwiftyJSON.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SwiftyJSON.swift; path = Source/SwiftyJSON/SwiftyJSON.swift; sourceTree = "<group>"; };
-		3AA513CBB31FA6C4A9813A2910768A12 /* Constants.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Constants.swift; path = Source/Constants.swift; sourceTree = "<group>"; };
 		3B13ECF7A220D20CE4EFBEC084AB981F /* Pods_IMChatSDK_Mac_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_IMChatSDK_Mac_Tests.framework; path = "Pods-IMChatSDK-Mac_Tests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		41B4E1429135E9E05D6370E4466E0643 /* Alamofire-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Alamofire-Info.plist"; sourceTree = "<group>"; };
 		437B91933EE61C0E75EF3828AD2D5E95 /* Pods-IMChatSDK-Mac_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-IMChatSDK-Mac_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
 		448386888511C7B353B4A69B921E3AC1 /* WebSocketServer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = WebSocketServer.swift; path = Sources/Server/WebSocketServer.swift; sourceTree = "<group>"; };
-		456DBFDBB21DB594FC4AC4DB07CF68A1 /* HttpManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = HttpManager.swift; sourceTree = "<group>"; };
 		482793966FFB11D5A5A7B09E01978D68 /* Pods-IMChatSDK-Mac_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-IMChatSDK-Mac_Example-frameworks.sh"; sourceTree = "<group>"; };
-		49B106F19C2FC40562BDF99F0843AACB /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
 		4EDF98523AFE1E8BEE350EF699FBB524 /* Pods-IMChatSDK-Mac_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-IMChatSDK-Mac_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
 		4F1661AB09B22377267ABBA01DC8AECB /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk/System/Library/Frameworks/Cocoa.framework; sourceTree = DEVELOPER_DIR; };
 		4FDB00B6386EC6A4B6CE69BE30F006DF /* Starscream.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = Starscream.modulemap; sourceTree = "<group>"; };
-		514513B5765BD897F5D8235B0B413DC2 /* WebSocketHelper.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = WebSocketHelper.swift; sourceTree = "<group>"; };
 		53DEDF656C801427A7BA15BBD8A79A37 /* Starscream-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Starscream-prefix.pch"; sourceTree = "<group>"; };
+		53E9AF68A0D84851D79AC6AF5854AFFC /* ResourceBundle-IMChatSDK-IMChatSDK-Mac-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "ResourceBundle-IMChatSDK-IMChatSDK-Mac-Info.plist"; sourceTree = "<group>"; };
 		58522F98961A10F6679B0B29557ADCDA /* Engine.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Engine.swift; path = Sources/Engine/Engine.swift; sourceTree = "<group>"; };
 		5D797E9A5C5782CE845840781FA1CC81 /* Alamofire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Alamofire.framework; path = Alamofire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		61CB0C2812B2592C7B2C8793D991579F /* Pods-IMChatSDK-Mac_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-IMChatSDK-Mac_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		6463FE4ACEB6433F1F21BAA36B7871C0 /* FoundationSecurity.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FoundationSecurity.swift; path = Sources/Security/FoundationSecurity.swift; sourceTree = "<group>"; };
+		64C32CF92D84007F44BA8AF58B072B44 /* IMChatSDK-Mac.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "IMChatSDK-Mac.release.xcconfig"; sourceTree = "<group>"; };
 		6A6374AA7CAEC40688389E157B05D9BD /* Pods-IMChatSDK-Mac_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-IMChatSDK-Mac_Tests-umbrella.h"; sourceTree = "<group>"; };
-		6BF7B86DACF09F4432495A7577B33E36 /* IMChatSDK-Mac.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "IMChatSDK-Mac.modulemap"; sourceTree = "<group>"; };
 		6CCA964F2C957D57BD997F2CD74D345D /* Pods_IMChatSDK_Mac_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_IMChatSDK_Mac_Example.framework; path = "Pods-IMChatSDK-Mac_Example.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		71F4C5F79BDC4D72B4259BDE51574FF1 /* Images.xcassets */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = Resources/Images.xcassets; sourceTree = "<group>"; };
 		7447966A025B63CC1A08F82850DBBA90 /* NetworkReachabilityManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NetworkReachabilityManager.swift; path = Source/NetworkReachabilityManager.swift; sourceTree = "<group>"; };
+		74BB4FDDE984C4DA9A835AB71B023A67 /* IMChatSDK-Mac-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "IMChatSDK-Mac-dummy.m"; sourceTree = "<group>"; };
 		792D90814F280459547C94CED1055F06 /* Starscream-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Starscream-Info.plist"; sourceTree = "<group>"; };
+		7B2D5A1078305AE93B8CD63E9175CC1A /* WebSocketHelper.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = WebSocketHelper.swift; sourceTree = "<group>"; };
 		7D4B07AE181BC35BEC059CA86D3F4C26 /* Server.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Server.swift; path = Sources/Server/Server.swift; sourceTree = "<group>"; };
 		82A2A5AD28833653933FFE1BB2BFDC96 /* Pods-IMChatSDK-Mac_Tests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-IMChatSDK-Mac_Tests-Info.plist"; sourceTree = "<group>"; };
+		845F02400C6523D383FB7390DBE87B8F /* IMChatSDK.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = IMChatSDK.bundle; path = "IMChatSDK-Mac-IMChatSDK.bundle"; sourceTree = BUILT_PRODUCTS_DIR; };
+		860A004DBEC204A72F6540B5A54F5694 /* HttpManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = HttpManager.swift; sourceTree = "<group>"; };
 		891B2270823847ED23F2ECFC28F935EC /* Starscream.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Starscream.framework; path = Starscream.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		89E4FA38C9E9634AFC3CF4DD81B5C251 /* Pods-IMChatSDK-Mac_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-IMChatSDK-Mac_Tests.modulemap"; sourceTree = "<group>"; };
 		8AB6F4F77C99DAB3A379E06603F4B185 /* Starscream-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Starscream-dummy.m"; sourceTree = "<group>"; };
+		8FE6BC65F7E5C9BF522A23651235FD7A /* HttpUtil.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = HttpUtil.swift; sourceTree = "<group>"; };
 		90D86A705A1C389EEE2EA7D9752F3B9A /* Pods-IMChatSDK-Mac_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-IMChatSDK-Mac_Example-acknowledgements.plist"; sourceTree = "<group>"; };
 		91D3F4AD231C59435F28EE5E5F1B3ADE /* Pods-IMChatSDK-Mac_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-IMChatSDK-Mac_Example.release.xcconfig"; sourceTree = "<group>"; };
 		940ABDFEF26B64449EE525675C5C8FA5 /* AFError.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AFError.swift; path = Source/AFError.swift; sourceTree = "<group>"; };
@@ -185,7 +199,7 @@
 		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		9EEE8C5AF0040F4B313FBF52ABF44A47 /* Starscream.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Starscream.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9EFCAB7CB5832CFAB615F3711AFCFEAA /* FrameCollector.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FrameCollector.swift; path = Sources/Framer/FrameCollector.swift; sourceTree = "<group>"; };
-		9FBDFDC547D46CC889EAC8EF8D807C35 /* IMChatSDK-Mac.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "IMChatSDK-Mac.debug.xcconfig"; sourceTree = "<group>"; };
+		A309F0C412641B152C4F29EC74F30959 /* IMChatSDK-Mac.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "IMChatSDK-Mac.debug.xcconfig"; sourceTree = "<group>"; };
 		A3D54FE633DD36AB753213852B54CBCC /* ResponseSerialization.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ResponseSerialization.swift; path = Source/ResponseSerialization.swift; sourceTree = "<group>"; };
 		A3DBB4CC016C7FE3CA7BDF36FEE45D32 /* SwiftyJSON-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SwiftyJSON-dummy.m"; sourceTree = "<group>"; };
 		A489630D8C08DE244A125AC1EB0E14EB /* Alamofire-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Alamofire-dummy.m"; sourceTree = "<group>"; };
@@ -201,57 +215,56 @@
 		B38C1339E2FA81A79CB5ABDDA0BB084F /* Result.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Result.swift; path = Source/Result.swift; sourceTree = "<group>"; };
 		B58BBF987D90C98DAB6C3FF2D512028C /* SwiftyJSON.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SwiftyJSON.release.xcconfig; sourceTree = "<group>"; };
 		B64C1E52586B2D0DC0F20FCCD4A94C5D /* SwiftyJSON-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "SwiftyJSON-Info.plist"; sourceTree = "<group>"; };
-		B6EDFD5E7E79010D548B3CC4DD87767C /* HttpUtil.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = HttpUtil.swift; sourceTree = "<group>"; };
 		B913C700D36F16491BCBD41EAE896F0A /* Validation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Validation.swift; path = Source/Validation.swift; sourceTree = "<group>"; };
-		B9B2F49140B9CDF43369F78FBBE8A6B9 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
+		B925B7893A251139ED5DEC8996977B5D /* msgloading.json */ = {isa = PBXFileReference; includeInIndex = 1; name = msgloading.json; path = Resources/msgloading.json; sourceTree = "<group>"; };
 		BCA00FC4EB040D1C39CE1543A13AD903 /* Framer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Framer.swift; path = Sources/Framer/Framer.swift; sourceTree = "<group>"; };
 		BCEB92EB1B7BCAF63497C0D23D11F6B0 /* IMChatSDK_Mac.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = IMChatSDK_Mac.framework; path = "IMChatSDK-Mac.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BD20FBBA54985EA388344997F27B0B74 /* Starscream.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Starscream.debug.xcconfig; sourceTree = "<group>"; };
 		BE5304A58539142F475B6FBEDE099A56 /* ParameterEncoding.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ParameterEncoding.swift; path = Source/ParameterEncoding.swift; sourceTree = "<group>"; };
 		BFA59B8B9FB1A50E513D9B833E30247E /* WSCompression.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = WSCompression.swift; path = Sources/Compression/WSCompression.swift; sourceTree = "<group>"; };
 		C2A1BD626F3BAE20B9080D27410C8D49 /* Starscream.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Starscream.release.xcconfig; sourceTree = "<group>"; };
-		C3CC3E148961991EAE40197C9AE16DBA /* IMChatSDK-Mac-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "IMChatSDK-Mac-dummy.m"; sourceTree = "<group>"; };
-		C4920B539D909612176461D883BFF3A1 /* IMChatSDK-Mac-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "IMChatSDK-Mac-umbrella.h"; sourceTree = "<group>"; };
 		C56D5B74E3B9A7D9AECC3162675190B0 /* DispatchQueue+Alamofire.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "DispatchQueue+Alamofire.swift"; path = "Source/DispatchQueue+Alamofire.swift"; sourceTree = "<group>"; };
 		C5FF37C8DFD66E144772FD9F9325B23B /* Compression.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Compression.swift; path = Sources/Compression/Compression.swift; sourceTree = "<group>"; };
-		C66224A176C6C9E417E324E818432712 /* IMChatSDK-Mac.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "IMChatSDK-Mac.release.xcconfig"; sourceTree = "<group>"; };
-		C6801D906C48B75A2A9B7B124A847956 /* IMChatSDK-Mac-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "IMChatSDK-Mac-prefix.pch"; sourceTree = "<group>"; };
+		C63AB0B7748E9026DA572D1E990A35A4 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
 		C7D130EEEF55CDE53FB1E284B453730F /* Alamofire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Alamofire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CF3DD9C332EC68B6DC1E140B530FEED5 /* StringHTTPHandler.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = StringHTTPHandler.swift; path = Sources/Framer/StringHTTPHandler.swift; sourceTree = "<group>"; };
 		CFC9AD38B3AA189D2A715087AD14FAA7 /* FoundationHTTPServerHandler.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FoundationHTTPServerHandler.swift; path = Sources/Framer/FoundationHTTPServerHandler.swift; sourceTree = "<group>"; };
 		D0807DA2F68A83F7EB7CA309CA369140 /* Response.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Response.swift; path = Source/Response.swift; sourceTree = "<group>"; };
 		D2DEA9BC2BA239E1928AB7516A3AC895 /* Alamofire.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Alamofire.release.xcconfig; sourceTree = "<group>"; };
+		D46C31D815A45435292A0F5C782043AB /* IMChatSDK-Mac.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "IMChatSDK-Mac.modulemap"; sourceTree = "<group>"; };
 		D4A6A17989FAE955F6EEC56BFC804C98 /* Pods-IMChatSDK-Mac_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-IMChatSDK-Mac_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		D52F9822BD90C2F34CB7D8F56F92D1D3 /* Pods-IMChatSDK-Mac_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-IMChatSDK-Mac_Tests-dummy.m"; sourceTree = "<group>"; };
-		D890797EC47D23D9942B4D0D3C06068B /* IMChatSDK-Mac.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = "IMChatSDK-Mac.podspec"; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		D8ED56766912ABE06276C8395761454C /* Pods-IMChatSDK-Mac_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-IMChatSDK-Mac_Example-dummy.m"; sourceTree = "<group>"; };
+		DA6675812C98D7446730D8C94A16C48C /* IMChatSDK-Mac.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = "IMChatSDK-Mac.podspec"; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		E0456DD9ECE2218D5AEC51642EAF5836 /* FoundationTransport.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FoundationTransport.swift; path = Sources/Transport/FoundationTransport.swift; sourceTree = "<group>"; };
 		E23C076BA70925415F490FEDB215DA92 /* SwiftyJSON.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = SwiftyJSON.framework; path = SwiftyJSON.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E379D5085EC41D6B8CC890651C80C768 /* SwiftyJSON-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftyJSON-prefix.pch"; sourceTree = "<group>"; };
 		E404B327A610583575B25D1A2DF50DE7 /* Pods-IMChatSDK-Mac_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-IMChatSDK-Mac_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
+		E434B0AC721141C95479E2910FE49260 /* IMChatSDK-Mac-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "IMChatSDK-Mac-Info.plist"; sourceTree = "<group>"; };
 		E44E1C450036366D11FE2996CC1EEC8A /* WebSocket.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = WebSocket.swift; path = Sources/Starscream/WebSocket.swift; sourceTree = "<group>"; };
 		E4763F084C944C52B03D290D004C540D /* Pods-IMChatSDK-Mac_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-IMChatSDK-Mac_Example-umbrella.h"; sourceTree = "<group>"; };
 		ED8C1052C132345AF922C14D7BEAA6BD /* Alamofire.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Alamofire.swift; path = Source/Alamofire.swift; sourceTree = "<group>"; };
+		F79D0CFA2DB6360C822062D14DE1F43E /* Constants.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Constants.swift; path = Source/Constants.swift; sourceTree = "<group>"; };
 		F8C51F7F129A685B2F83468B19664AD8 /* SwiftyJSON.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SwiftyJSON.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FCF053BED5C072FFB7214CBF39529C53 /* IMChatSDK-Mac-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "IMChatSDK-Mac-prefix.pch"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		1475EB53F554EF422C377684BBE53839 /* Frameworks */ = {
+		0C637097FBA40E392239556E8C1CE209 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A077C7ED1F85845F9767C67C98A53566 /* Cocoa.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		1F307E12AFEA7EABF380C0A61D29B332 /* Frameworks */ = {
+		3FD6C510931849AF57A35ED5BE59E4C8 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7CCBA47CA460A2D0C4E699F4A6BF3D8D /* Alamofire.framework in Frameworks */,
-				42A89D2C1156919808119AFEF20F1843 /* Cocoa.framework in Frameworks */,
-				DE5CC35FB3007294C985FA448A6398C5 /* Starscream.framework in Frameworks */,
-				F370F8368B1A7C38DA5A65ED318D3FE8 /* SwiftyJSON.framework in Frameworks */,
+				AAD9819DFCBB8700A0C96503B0E19B37 /* Alamofire.framework in Frameworks */,
+				C1C77801D51E45A76D08B0916EC4717D /* Cocoa.framework in Frameworks */,
+				C9041C64ECCDAF2A22F76EB00DB94815 /* Starscream.framework in Frameworks */,
+				7D6880C076213D093D9674B18A2FD42D /* SwiftyJSON.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -263,11 +276,11 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		C0F8F076AB49BE563E369A7307F870BD /* Frameworks */ = {
+		A937FA48E64FA68437B62E03861CE624 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DF5620E91F203B6E8B52D71A787EE243 /* Cocoa.framework in Frameworks */,
+				5B5E60DD446AA8016FA9137F2882FF95 /* Cocoa.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -276,6 +289,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				895D4F86D2CCD53B88E72FD7116F2C46 /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E56BFD236C03BEC933AD7355FE4ABF16 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				014B8E7E679F01B2C717E2D7525A67C6 /* Cocoa.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -290,32 +311,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		0D021EEED66769835987A8B9EF649874 /* Http */ = {
+		26B1297A99F9620F66AC50E6AA6343EC /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				456DBFDBB21DB594FC4AC4DB07CF68A1 /* HttpManager.swift */,
-				B6EDFD5E7E79010D548B3CC4DD87767C /* HttpUtil.swift */,
+				71F4C5F79BDC4D72B4259BDE51574FF1 /* Images.xcassets */,
+				B925B7893A251139ED5DEC8996977B5D /* msgloading.json */,
 			);
-			name = Http;
-			path = Source/Http;
-			sourceTree = "<group>";
-		};
-		11A504402324C384692DD0C7AC13F7EA /* Development Pods */ = {
-			isa = PBXGroup;
-			children = (
-				2ADB03AD90B44BABF28DEA0233B2CF18 /* IMChatSDK-Mac */,
-			);
-			name = "Development Pods";
-			sourceTree = "<group>";
-		};
-		20816D0ED967A9876B0C90C110BC764A /* Pod */ = {
-			isa = PBXGroup;
-			children = (
-				D890797EC47D23D9942B4D0D3C06068B /* IMChatSDK-Mac.podspec */,
-				49B106F19C2FC40562BDF99F0843AACB /* LICENSE */,
-				B9B2F49140B9CDF43369F78FBBE8A6B9 /* README.md */,
-			);
-			name = Pod;
+			name = Resources;
 			sourceTree = "<group>";
 		};
 		2A39C1DAB98E09B9BF135FA9EAD4A711 /* Support Files */ = {
@@ -331,19 +333,6 @@
 			);
 			name = "Support Files";
 			path = "../Target Support Files/Starscream";
-			sourceTree = "<group>";
-		};
-		2ADB03AD90B44BABF28DEA0233B2CF18 /* IMChatSDK-Mac */ = {
-			isa = PBXGroup;
-			children = (
-				3AA513CBB31FA6C4A9813A2910768A12 /* Constants.swift */,
-				45BA1DD96C755D52A99BE448679952EA /* Core */,
-				0D021EEED66769835987A8B9EF649874 /* Http */,
-				20816D0ED967A9876B0C90C110BC764A /* Pod */,
-				E2A3B75A34CD81B3EE75D815A143DD8E /* Support Files */,
-			);
-			name = "IMChatSDK-Mac";
-			path = ../..;
 			sourceTree = "<group>";
 		};
 		2EEECC2B1F85FCA7E972A33F01C2273E /* Support Files */ = {
@@ -378,17 +367,12 @@
 			path = "Target Support Files/Pods-IMChatSDK-Mac_Example";
 			sourceTree = "<group>";
 		};
-		3C9A41915F3F4B63CDEF5AB3DC57CF68 /* Products */ = {
+		38CDA6EF3E1F7D9B83AE0E2D3BF13E00 /* Development Pods */ = {
 			isa = PBXGroup;
 			children = (
-				5D797E9A5C5782CE845840781FA1CC81 /* Alamofire.framework */,
-				BCEB92EB1B7BCAF63497C0D23D11F6B0 /* IMChatSDK_Mac.framework */,
-				6CCA964F2C957D57BD997F2CD74D345D /* Pods_IMChatSDK_Mac_Example.framework */,
-				3B13ECF7A220D20CE4EFBEC084AB981F /* Pods_IMChatSDK_Mac_Tests.framework */,
-				891B2270823847ED23F2ECFC28F935EC /* Starscream.framework */,
-				E23C076BA70925415F490FEDB215DA92 /* SwiftyJSON.framework */,
+				A7CCFB45178A0145E478F6C39D35C22E /* IMChatSDK-Mac */,
 			);
-			name = Products;
+			name = "Development Pods";
 			sourceTree = "<group>";
 		};
 		4282D61870601862E17BCA076FB25F9F /* Starscream */ = {
@@ -420,15 +404,6 @@
 			path = Starscream;
 			sourceTree = "<group>";
 		};
-		45BA1DD96C755D52A99BE448679952EA /* Core */ = {
-			isa = PBXGroup;
-			children = (
-				514513B5765BD897F5D8235B0B413DC2 /* WebSocketHelper.swift */,
-			);
-			name = Core;
-			path = Source/Core;
-			sourceTree = "<group>";
-		};
 		527130491E0940C652E9ED7B0635E3D5 /* Pods-IMChatSDK-Mac_Tests */ = {
 			isa = PBXGroup;
 			children = (
@@ -454,6 +429,56 @@
 				D7B84726C7CF974AAB58EBAD2328BD51 /* OS X */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		5758E5597932D8575EB41FC3F5346759 /* Http */ = {
+			isa = PBXGroup;
+			children = (
+				860A004DBEC204A72F6540B5A54F5694 /* HttpManager.swift */,
+				8FE6BC65F7E5C9BF522A23651235FD7A /* HttpUtil.swift */,
+			);
+			name = Http;
+			path = Source/Http;
+			sourceTree = "<group>";
+		};
+		689F63EBF169739C723C4D062F09D3D1 /* Pod */ = {
+			isa = PBXGroup;
+			children = (
+				DA6675812C98D7446730D8C94A16C48C /* IMChatSDK-Mac.podspec */,
+				1C75BB5AD128FD91081DB9892DC05C7C /* LICENSE */,
+				C63AB0B7748E9026DA572D1E990A35A4 /* README.md */,
+			);
+			name = Pod;
+			sourceTree = "<group>";
+		};
+		87E4254C321CBF646655D6B28A9B86BB /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				D46C31D815A45435292A0F5C782043AB /* IMChatSDK-Mac.modulemap */,
+				74BB4FDDE984C4DA9A835AB71B023A67 /* IMChatSDK-Mac-dummy.m */,
+				E434B0AC721141C95479E2910FE49260 /* IMChatSDK-Mac-Info.plist */,
+				FCF053BED5C072FFB7214CBF39529C53 /* IMChatSDK-Mac-prefix.pch */,
+				2E7DBF75FDC86EEA1A09220B3F8EFFCD /* IMChatSDK-Mac-umbrella.h */,
+				A309F0C412641B152C4F29EC74F30959 /* IMChatSDK-Mac.debug.xcconfig */,
+				64C32CF92D84007F44BA8AF58B072B44 /* IMChatSDK-Mac.release.xcconfig */,
+				53E9AF68A0D84851D79AC6AF5854AFFC /* ResourceBundle-IMChatSDK-IMChatSDK-Mac-Info.plist */,
+			);
+			name = "Support Files";
+			path = "Example/Pods/Target Support Files/IMChatSDK-Mac";
+			sourceTree = "<group>";
+		};
+		A7CCFB45178A0145E478F6C39D35C22E /* IMChatSDK-Mac */ = {
+			isa = PBXGroup;
+			children = (
+				F79D0CFA2DB6360C822062D14DE1F43E /* Constants.swift */,
+				FAD07B017E263940B460A7FDE527B62B /* Core */,
+				5758E5597932D8575EB41FC3F5346759 /* Http */,
+				689F63EBF169739C723C4D062F09D3D1 /* Pod */,
+				26B1297A99F9620F66AC50E6AA6343EC /* Resources */,
+				87E4254C321CBF646655D6B28A9B86BB /* Support Files */,
+			);
+			name = "IMChatSDK-Mac";
+			path = ../..;
 			sourceTree = "<group>";
 		};
 		AAE72919188E4B2804CB6710F45F4DEF /* Support Files */ = {
@@ -504,10 +529,10 @@
 			isa = PBXGroup;
 			children = (
 				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
-				11A504402324C384692DD0C7AC13F7EA /* Development Pods */,
+				38CDA6EF3E1F7D9B83AE0E2D3BF13E00 /* Development Pods */,
 				56704D4F7495BA0F69FE4C24861CD7B1 /* Frameworks */,
 				BC26477B4F7207A72CC92C5A45C0D393 /* Pods */,
-				3C9A41915F3F4B63CDEF5AB3DC57CF68 /* Products */,
+				E1BA4499124E0BE01B15D3F6774EA9EE /* Products */,
 				B414F93F23B46C451335F12F8F824348 /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
@@ -546,29 +571,37 @@
 			path = Alamofire;
 			sourceTree = "<group>";
 		};
-		E2A3B75A34CD81B3EE75D815A143DD8E /* Support Files */ = {
+		E1BA4499124E0BE01B15D3F6774EA9EE /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				6BF7B86DACF09F4432495A7577B33E36 /* IMChatSDK-Mac.modulemap */,
-				C3CC3E148961991EAE40197C9AE16DBA /* IMChatSDK-Mac-dummy.m */,
-				199F8FB86A398019CD8F18725BBEC65C /* IMChatSDK-Mac-Info.plist */,
-				C6801D906C48B75A2A9B7B124A847956 /* IMChatSDK-Mac-prefix.pch */,
-				C4920B539D909612176461D883BFF3A1 /* IMChatSDK-Mac-umbrella.h */,
-				9FBDFDC547D46CC889EAC8EF8D807C35 /* IMChatSDK-Mac.debug.xcconfig */,
-				C66224A176C6C9E417E324E818432712 /* IMChatSDK-Mac.release.xcconfig */,
+				5D797E9A5C5782CE845840781FA1CC81 /* Alamofire.framework */,
+				845F02400C6523D383FB7390DBE87B8F /* IMChatSDK.bundle */,
+				BCEB92EB1B7BCAF63497C0D23D11F6B0 /* IMChatSDK_Mac.framework */,
+				6CCA964F2C957D57BD997F2CD74D345D /* Pods_IMChatSDK_Mac_Example.framework */,
+				3B13ECF7A220D20CE4EFBEC084AB981F /* Pods_IMChatSDK_Mac_Tests.framework */,
+				891B2270823847ED23F2ECFC28F935EC /* Starscream.framework */,
+				E23C076BA70925415F490FEDB215DA92 /* SwiftyJSON.framework */,
 			);
-			name = "Support Files";
-			path = "Example/Pods/Target Support Files/IMChatSDK-Mac";
+			name = Products;
+			sourceTree = "<group>";
+		};
+		FAD07B017E263940B460A7FDE527B62B /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				7B2D5A1078305AE93B8CD63E9175CC1A /* WebSocketHelper.swift */,
+			);
+			name = Core;
+			path = Source/Core;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		0561DCA86E2836544D9CCB97CE5C81F0 /* Headers */ = {
+		16B946DA1D6F7F8E773300099464ED21 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0CDC4D1C8CBFDE87AB4B8E406A64F391 /* IMChatSDK-Mac-umbrella.h in Headers */,
+				D8B55A8548D6422D3FE385D2A65E3754 /* Starscream-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -588,27 +621,27 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		4B61BC39AA1F782A7E00CB8C46BE9439 /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				662E4726F8786A94AAC7924C34305741 /* Starscream-umbrella.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		89E998AA97EF202FBB77CB0AC4FF5724 /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				E18250A20D8384A5CE2E0EBEF429B877 /* SwiftyJSON-umbrella.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		98484538D835EB370E0670A13B62E8B5 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				FF10ED89962D9FC0DF3A9B8181E76913 /* Pods-IMChatSDK-Mac_Tests-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CC7CA2DE12BD01F53980CDB2269930A4 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D8759390D0A4E062A6EEF6EFE722001B /* SwiftyJSON-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E3079FBFE8546D1D87714345FFDA8EE1 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				674E5A081A4DA4B6AD04C01BF19650DD /* IMChatSDK-Mac-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -634,14 +667,31 @@
 			productReference = 3B13ECF7A220D20CE4EFBEC084AB981F /* Pods_IMChatSDK_Mac_Tests.framework */;
 			productType = "com.apple.product-type.framework";
 		};
+		4A2D5C169E7F3010F114A0293B9B6EA7 /* IMChatSDK-Mac-IMChatSDK */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0899C054E6882692C51278B15A806BAA /* Build configuration list for PBXNativeTarget "IMChatSDK-Mac-IMChatSDK" */;
+			buildPhases = (
+				05F6CA6F361B725788E1A30484307ECF /* Sources */,
+				0C637097FBA40E392239556E8C1CE209 /* Frameworks */,
+				8FE3D8674121240309B106EFF2858A64 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "IMChatSDK-Mac-IMChatSDK";
+			productName = "IMChatSDK-Mac-IMChatSDK";
+			productReference = 845F02400C6523D383FB7390DBE87B8F /* IMChatSDK.bundle */;
+			productType = "com.apple.product-type.bundle";
+		};
 		9B78EE4AF6AE03E79D88886319853FF7 /* Starscream */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = F5AF51C40F099DF17A04DEDD084C4551 /* Build configuration list for PBXNativeTarget "Starscream" */;
+			buildConfigurationList = 1D943E506A2C64EC8C066D0C6A269F0A /* Build configuration list for PBXNativeTarget "Starscream" */;
 			buildPhases = (
-				4B61BC39AA1F782A7E00CB8C46BE9439 /* Headers */,
-				7EA04F3D5238E1CB13170814E4904B8E /* Sources */,
-				C0F8F076AB49BE563E369A7307F870BD /* Frameworks */,
-				8121C2AC496BD00E58DF0DC648923E81 /* Resources */,
+				16B946DA1D6F7F8E773300099464ED21 /* Headers */,
+				8581B6C88ACBB3A2CBC12BEA1F0C31BE /* Sources */,
+				E56BFD236C03BEC933AD7355FE4ABF16 /* Frameworks */,
+				FC5DC705C12413D2CC4637F50806E57A /* Resources */,
 			);
 			buildRules = (
 			);
@@ -654,19 +704,20 @@
 		};
 		B164B8D1A550314890F94317D0EE2536 /* IMChatSDK-Mac */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 19C3B31DF4D80958CBFF088DC26716D9 /* Build configuration list for PBXNativeTarget "IMChatSDK-Mac" */;
+			buildConfigurationList = 8D4FEFC5AAE98912DD009867F749A00D /* Build configuration list for PBXNativeTarget "IMChatSDK-Mac" */;
 			buildPhases = (
-				0561DCA86E2836544D9CCB97CE5C81F0 /* Headers */,
-				681CAD5E0F601C503CE2E4C991712B96 /* Sources */,
-				1F307E12AFEA7EABF380C0A61D29B332 /* Frameworks */,
-				33EA389B41FED26F6CE497F867B74EE2 /* Resources */,
+				E3079FBFE8546D1D87714345FFDA8EE1 /* Headers */,
+				939ED60DCA9E6CAA07494C001DD0C7F6 /* Sources */,
+				3FD6C510931849AF57A35ED5BE59E4C8 /* Frameworks */,
+				506ECFE3F2C30C43791BE729297CA421 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				7DF0A842C21DD598189D14DBC55A67FC /* PBXTargetDependency */,
-				F85463E28F1EB7E7B7A859F11072D8C2 /* PBXTargetDependency */,
-				0B0A2A2E584852FCA41105A7D64490F5 /* PBXTargetDependency */,
+				33A6BC2CE00DCC82DC218368F09A47DA /* PBXTargetDependency */,
+				A6D8ED00E8C20FEEC5F99A38C326B817 /* PBXTargetDependency */,
+				13EA43599CBF5CE6787E3A76BED25026 /* PBXTargetDependency */,
+				7E2527DD3F25419083622BA2156EF99E /* PBXTargetDependency */,
 			);
 			name = "IMChatSDK-Mac";
 			productName = "IMChatSDK-Mac";
@@ -697,12 +748,12 @@
 		};
 		D118A6A04828FD3CDA8640CD2B6796D2 /* SwiftyJSON */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = CB90E94BEECAE8C9C36115B88BBFEB72 /* Build configuration list for PBXNativeTarget "SwiftyJSON" */;
+			buildConfigurationList = 43C32216E6AB6BA4E1C9132602D28F44 /* Build configuration list for PBXNativeTarget "SwiftyJSON" */;
 			buildPhases = (
-				89E998AA97EF202FBB77CB0AC4FF5724 /* Headers */,
-				22C43A72B084E85052D59F43E9DDE38E /* Sources */,
-				1475EB53F554EF422C377684BBE53839 /* Frameworks */,
-				E5F2C57A0C70C8FEE2057731F939D8C5 /* Resources */,
+				CC7CA2DE12BD01F53980CDB2269930A4 /* Headers */,
+				2F73149ADAA873F478937C33202784BE /* Sources */,
+				A937FA48E64FA68437B62E03861CE624 /* Frameworks */,
+				39D235B91BFB91450D55346C91053FD1 /* Resources */,
 			);
 			buildRules = (
 			);
@@ -749,12 +800,13 @@
 				Base,
 			);
 			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
-			productRefGroup = 3C9A41915F3F4B63CDEF5AB3DC57CF68 /* Products */;
+			productRefGroup = E1BA4499124E0BE01B15D3F6774EA9EE /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
 				EAAA1AD3A8A1B59AB91319EE40752C6D /* Alamofire */,
 				B164B8D1A550314890F94317D0EE2536 /* IMChatSDK-Mac */,
+				4A2D5C169E7F3010F114A0293B9B6EA7 /* IMChatSDK-Mac-IMChatSDK */,
 				C50159C178509A9FC0422700542E5AB6 /* Pods-IMChatSDK-Mac_Example */,
 				2AC83F44EE250C38CF9261066DE4F143 /* Pods-IMChatSDK-Mac_Tests */,
 				9B78EE4AF6AE03E79D88886319853FF7 /* Starscream */,
@@ -764,14 +816,14 @@
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		33EA389B41FED26F6CE497F867B74EE2 /* Resources */ = {
+		39C64C7EF9964A193BF8253C0669EDAB /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		39C64C7EF9964A193BF8253C0669EDAB /* Resources */ = {
+		39D235B91BFB91450D55346C91053FD1 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -785,6 +837,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		506ECFE3F2C30C43791BE729297CA421 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				38E36C796A5ED0896CB5C763C28E45B0 /* IMChatSDK.bundle in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		6443AAC86287D0D629A6111271DDDD99 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -792,14 +852,16 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		8121C2AC496BD00E58DF0DC648923E81 /* Resources */ = {
+		8FE3D8674121240309B106EFF2858A64 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				44B923E146E7E93703AA6203F48BA863 /* Images.xcassets in Resources */,
+				DF5045212BAE0CE2902B3D5ECED9014F /* msgloading.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		E5F2C57A0C70C8FEE2057731F939D8C5 /* Resources */ = {
+		FC5DC705C12413D2CC4637F50806E57A /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -809,20 +871,18 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		05F6CA6F361B725788E1A30484307ECF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		1FACB58565D33969904C1095ED18C978 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				BD446A8F13B39188DC11029853865468 /* Pods-IMChatSDK-Mac_Example-dummy.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		22C43A72B084E85052D59F43E9DDE38E /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				2FBD9E7626644AC6E7DD07321D6E1B34 /* SwiftyJSON-dummy.m in Sources */,
-				CF9D54C62438DFD8AAD5F83EFC42D4B1 /* SwiftyJSON.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -851,6 +911,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		2F73149ADAA873F478937C33202784BE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B7401A0F3CFD05D91751431A7C6042B2 /* SwiftyJSON-dummy.m in Sources */,
+				BB82BF61845F852BF86630E255E85B62 /* SwiftyJSON.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		5CFCAF4888CF2B33AA13B7B4F4D8EFBD /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -859,43 +928,43 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		681CAD5E0F601C503CE2E4C991712B96 /* Sources */ = {
+		8581B6C88ACBB3A2CBC12BEA1F0C31BE /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FFD0FB8630946280FED866C7E8828B82 /* Constants.swift in Sources */,
-				3A21C410A494F80DB7FC106B5D249048 /* HttpManager.swift in Sources */,
-				CDFD8A71F14989B5D379AC73D25F257F /* HttpUtil.swift in Sources */,
-				533D2EE38FF13F34D1E539D02EA210E1 /* IMChatSDK-Mac-dummy.m in Sources */,
-				60BD4EA25FF1281CE111FC29A851748E /* WebSocketHelper.swift in Sources */,
+				225B8AD2315B43BB912F8EB4645E66B1 /* Compression.swift in Sources */,
+				781036DE3C69AAADD9A697DD6A671F11 /* Data+Extensions.swift in Sources */,
+				DFF3232DCD4427067D35870362AA4261 /* Engine.swift in Sources */,
+				9D25507FFFCF62BF930E3A3C63A52D8F /* FoundationHTTPHandler.swift in Sources */,
+				22BA8773E30184644EA6D780E010E5E9 /* FoundationHTTPServerHandler.swift in Sources */,
+				D083C015C1210BD695A90726534BEBD6 /* FoundationSecurity.swift in Sources */,
+				DFCEBE21F5658CE058D102EBDBD4D658 /* FoundationTransport.swift in Sources */,
+				237DEDFD76299E836FC3ADABA7AD1387 /* FrameCollector.swift in Sources */,
+				9EB72E98EF211979FAAE976EDD346602 /* Framer.swift in Sources */,
+				BC657677BF2DD1682A77CFDA1784E6A3 /* HTTPHandler.swift in Sources */,
+				AA05CAF095109E47A48833DEC6C2DF4F /* NativeEngine.swift in Sources */,
+				FC42990E8426BE85C61C392600FD8061 /* Security.swift in Sources */,
+				9AAE6FABA0B85A448BF54D45BFBE1791 /* Server.swift in Sources */,
+				D07FAAA683AEE036D11FE98080954361 /* Starscream-dummy.m in Sources */,
+				D2C60CF6F703F56DE25327367CB04EFF /* StringHTTPHandler.swift in Sources */,
+				329104B43067F89923668250F55DDE6F /* TCPTransport.swift in Sources */,
+				22FC76813C5D6E50E6676EDFF616DE51 /* Transport.swift in Sources */,
+				A16964BCC25C10DEFB0B31BD33C954F4 /* WebSocket.swift in Sources */,
+				2C74D72710309CD89A9B3B96588018DF /* WebSocketServer.swift in Sources */,
+				C2D43B786F2AA9C58E16CBDE74B08E77 /* WSCompression.swift in Sources */,
+				E6EAF46D27D481123A4583D6E3928E3A /* WSEngine.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		7EA04F3D5238E1CB13170814E4904B8E /* Sources */ = {
+		939ED60DCA9E6CAA07494C001DD0C7F6 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				334D67A75537512CF2305B3A15737711 /* Compression.swift in Sources */,
-				5A2266090F929F9EE436C0A42CBD3265 /* Data+Extensions.swift in Sources */,
-				A484C32882151ED1E107783C7CD3CB4D /* Engine.swift in Sources */,
-				895693D858995724AAA3C0EECCA20440 /* FoundationHTTPHandler.swift in Sources */,
-				AD771ED846CBC7354D1266D9ADCF9CB1 /* FoundationHTTPServerHandler.swift in Sources */,
-				A4F0317354EAF80BBEE54E854FAA0902 /* FoundationSecurity.swift in Sources */,
-				B30757865C69F1C89DA37C0247DC15EE /* FoundationTransport.swift in Sources */,
-				A059C4621917963D5E019F73D002DCA4 /* FrameCollector.swift in Sources */,
-				A8FBD496D883354BA503B4305D7BB514 /* Framer.swift in Sources */,
-				B538260F22C0670D03A212DA47B97B8F /* HTTPHandler.swift in Sources */,
-				1A014E11497A4245B8596C247D51BA10 /* NativeEngine.swift in Sources */,
-				C40F9256CBEF34AC1A1A1AA504337647 /* Security.swift in Sources */,
-				EFD0290097FF2199362F6E3B3700D9D9 /* Server.swift in Sources */,
-				0BB256BD4CB000FD0AD2D24D21F1940F /* Starscream-dummy.m in Sources */,
-				438441797C2A4696F10012CE38BB139E /* StringHTTPHandler.swift in Sources */,
-				CBDBB762798134F414140C6F259C3148 /* TCPTransport.swift in Sources */,
-				C1393BD4201C70CB32DF08C36E529136 /* Transport.swift in Sources */,
-				017AB6965CC7E7299C05010B047F85F1 /* WebSocket.swift in Sources */,
-				A19C33F458A820A629D9BE7020EB9C99 /* WebSocketServer.swift in Sources */,
-				48CC98B4E84504304E05C494E651CD65 /* WSCompression.swift in Sources */,
-				32701D4400BA5147EA76BA59B5422683 /* WSEngine.swift in Sources */,
+				952C6BCE6A6D322FF8CF99156ABDF309 /* Constants.swift in Sources */,
+				3484A3158C5E6944214E51C84A455D1C /* HttpManager.swift in Sources */,
+				D8ACCB64A1EA08F5C7861D12BFE340C9 /* HttpUtil.swift in Sources */,
+				AC8CAB95815B2216A1B6A15762851E4B /* IMChatSDK-Mac-dummy.m in Sources */,
+				43183919FD54AAD0E9771FF64FE020C7 /* WebSocketHelper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -908,11 +977,17 @@
 			target = B164B8D1A550314890F94317D0EE2536 /* IMChatSDK-Mac */;
 			targetProxy = 56449C8DBD70B7938EADD19D0F2C0BAD /* PBXContainerItemProxy */;
 		};
-		0B0A2A2E584852FCA41105A7D64490F5 /* PBXTargetDependency */ = {
+		13EA43599CBF5CE6787E3A76BED25026 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			name = SwiftyJSON;
-			target = D118A6A04828FD3CDA8640CD2B6796D2 /* SwiftyJSON */;
-			targetProxy = D3960AAF0FE5B13BBBDE37B3FAA2B554 /* PBXContainerItemProxy */;
+			name = Starscream;
+			target = 9B78EE4AF6AE03E79D88886319853FF7 /* Starscream */;
+			targetProxy = 6F0C9B8D95A075FF8A7E890BAA36FF58 /* PBXContainerItemProxy */;
+		};
+		33A6BC2CE00DCC82DC218368F09A47DA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Alamofire;
+			target = EAAA1AD3A8A1B59AB91319EE40752C6D /* Alamofire */;
+			targetProxy = 8DCC57A963195A785A3F721F1787955B /* PBXContainerItemProxy */;
 		};
 		368BFECB63F478405E3F8354D2D5B7EF /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -920,17 +995,23 @@
 			target = EAAA1AD3A8A1B59AB91319EE40752C6D /* Alamofire */;
 			targetProxy = C6FCAC9E01BAAAFF5C3A384BB3D4B5BA /* PBXContainerItemProxy */;
 		};
-		7DF0A842C21DD598189D14DBC55A67FC /* PBXTargetDependency */ = {
+		7E2527DD3F25419083622BA2156EF99E /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			name = Alamofire;
-			target = EAAA1AD3A8A1B59AB91319EE40752C6D /* Alamofire */;
-			targetProxy = 328B1210DF252937EB9E9A4321EA9552 /* PBXContainerItemProxy */;
+			name = SwiftyJSON;
+			target = D118A6A04828FD3CDA8640CD2B6796D2 /* SwiftyJSON */;
+			targetProxy = 7C0201B679382DB3CC558206F6AB7D0B /* PBXContainerItemProxy */;
 		};
 		8CEC19FB9AFDD775794FDE73014BEE10 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = "Pods-IMChatSDK-Mac_Example";
 			target = C50159C178509A9FC0422700542E5AB6 /* Pods-IMChatSDK-Mac_Example */;
 			targetProxy = 456127A4AE161CF918A778CBC1B313B3 /* PBXContainerItemProxy */;
+		};
+		A6D8ED00E8C20FEEC5F99A38C326B817 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "IMChatSDK-Mac-IMChatSDK";
+			target = 4A2D5C169E7F3010F114A0293B9B6EA7 /* IMChatSDK-Mac-IMChatSDK */;
+			targetProxy = 65EE8B5FFFCF5499786BC9C41509F3C5 /* PBXContainerItemProxy */;
 		};
 		D102B4B9F88D438FEC86D3FEBF7BAAEC /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -944,52 +1025,12 @@
 			target = D118A6A04828FD3CDA8640CD2B6796D2 /* SwiftyJSON */;
 			targetProxy = 436D0E83AC9E528AD401CB717CE28537 /* PBXContainerItemProxy */;
 		};
-		F85463E28F1EB7E7B7A859F11072D8C2 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = Starscream;
-			target = 9B78EE4AF6AE03E79D88886319853FF7 /* Starscream */;
-			targetProxy = A802B67661E8897BE9ECC8530B390615 /* PBXContainerItemProxy */;
-		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		0ABB00A00075EDC5DF7816F58C99F056 /* Debug */ = {
+		0B670E35CB9E0C107067FA619914E5C6 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = BD20FBBA54985EA388344997F27B0B74 /* Starscream.debug.xcconfig */;
-			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				FRAMEWORK_VERSION = A;
-				GCC_PREFIX_HEADER = "Target Support Files/Starscream/Starscream-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/Starscream/Starscream-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 10.10;
-				MODULEMAP_FILE = "Target Support Files/Starscream/Starscream.modulemap";
-				PRODUCT_MODULE_NAME = Starscream;
-				PRODUCT_NAME = Starscream;
-				SDKROOT = macosx;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 5.0;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		0BFA37ADA8B022E735CFB310B981CDA5 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = C66224A176C6C9E417E324E818432712 /* IMChatSDK-Mac.release.xcconfig */;
+			baseConfigurationReference = 64C32CF92D84007F44BA8AF58B072B44 /* IMChatSDK-Mac.release.xcconfig */;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				CLANG_ENABLE_OBJC_WEAK = NO;
@@ -1091,7 +1132,25 @@
 			};
 			name = Release;
 		};
-		6835AA37156335C17D9C1C8A468F7268 /* Debug */ = {
+		3768B0E11AF9A490269C195C3D7B74DA /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 64C32CF92D84007F44BA8AF58B072B44 /* IMChatSDK-Mac.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
+				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/IMChatSDK-Mac";
+				IBSC_MODULE = IMChatSDK_Mac;
+				INFOPLIST_FILE = "Target Support Files/IMChatSDK-Mac/ResourceBundle-IMChatSDK-IMChatSDK-Mac-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Bundles";
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				PRODUCT_NAME = IMChatSDK;
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Release;
+		};
+		43513F409298EDB07FB823E8A8AD3450 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 015A6808BDC8873833F4CB66C7DD97A3 /* SwiftyJSON.debug.xcconfig */;
 			buildSettings = {
@@ -1124,9 +1183,110 @@
 			};
 			name = Debug;
 		};
-		8DF9DEEF54F96213D7FA3681E62D6D85 /* Debug */ = {
+		609C5C2C91014326ABB6F5C4BFCFA882 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 9FBDFDC547D46CC889EAC8EF8D807C35 /* IMChatSDK-Mac.debug.xcconfig */;
+			baseConfigurationReference = B58BBF987D90C98DAB6C3FF2D512028C /* SwiftyJSON.release.xcconfig */;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_VERSION = A;
+				GCC_PREFIX_HEADER = "Target Support Files/SwiftyJSON/SwiftyJSON-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/SwiftyJSON/SwiftyJSON-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				MODULEMAP_FILE = "Target Support Files/SwiftyJSON/SwiftyJSON.modulemap";
+				PRODUCT_MODULE_NAME = SwiftyJSON;
+				PRODUCT_NAME = SwiftyJSON;
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		7ABCF4D4AD4F30139445CB9AFC1E51DB /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C2A1BD626F3BAE20B9080D27410C8D49 /* Starscream.release.xcconfig */;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_VERSION = A;
+				GCC_PREFIX_HEADER = "Target Support Files/Starscream/Starscream-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Starscream/Starscream-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MODULEMAP_FILE = "Target Support Files/Starscream/Starscream.modulemap";
+				PRODUCT_MODULE_NAME = Starscream;
+				PRODUCT_NAME = Starscream;
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		7AD2A1F71D5DDBFF7AB65ECE3E02F2D4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = BD20FBBA54985EA388344997F27B0B74 /* Starscream.debug.xcconfig */;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_VERSION = A;
+				GCC_PREFIX_HEADER = "Target Support Files/Starscream/Starscream-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Starscream/Starscream-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MODULEMAP_FILE = "Target Support Files/Starscream/Starscream.modulemap";
+				PRODUCT_MODULE_NAME = Starscream;
+				PRODUCT_NAME = Starscream;
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		7D1DEB3116AD5F86064E1D930B76924F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A309F0C412641B152C4F29EC74F30959 /* IMChatSDK-Mac.debug.xcconfig */;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				CLANG_ENABLE_OBJC_WEAK = NO;
@@ -1292,40 +1452,6 @@
 			};
 			name = Debug;
 		};
-		E2521DA95FA90733E6DE7E940BC2C692 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = C2A1BD626F3BAE20B9080D27410C8D49 /* Starscream.release.xcconfig */;
-			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				FRAMEWORK_VERSION = A;
-				GCC_PREFIX_HEADER = "Target Support Files/Starscream/Starscream-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/Starscream/Starscream-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 10.10;
-				MODULEMAP_FILE = "Target Support Files/Starscream/Starscream.modulemap";
-				PRODUCT_MODULE_NAME = Starscream;
-				PRODUCT_NAME = Starscream;
-				SDKROOT = macosx;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 5.0;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
 		E4DEAC9B52796426D2A37E7074A1738D /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -1386,6 +1512,24 @@
 			};
 			name = Release;
 		};
+		E677495F7D921663734EE38F9F3DEC3B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A309F0C412641B152C4F29EC74F30959 /* IMChatSDK-Mac.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
+				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/IMChatSDK-Mac";
+				IBSC_MODULE = IMChatSDK_Mac;
+				INFOPLIST_FILE = "Target Support Files/IMChatSDK-Mac/ResourceBundle-IMChatSDK-IMChatSDK-Mac-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Bundles";
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				PRODUCT_NAME = IMChatSDK;
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Debug;
+		};
 		EC836E5CDAE048CAD4C21AEA9CC44D70 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 61CB0C2812B2592C7B2C8793D991579F /* Pods-IMChatSDK-Mac_Tests.debug.xcconfig */;
@@ -1421,39 +1565,6 @@
 				VERSION_INFO_PREFIX = "";
 			};
 			name = Debug;
-		};
-		EEEBC2ABC1138195F83D42E39F0C42B9 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = B58BBF987D90C98DAB6C3FF2D512028C /* SwiftyJSON.release.xcconfig */;
-			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				FRAMEWORK_VERSION = A;
-				GCC_PREFIX_HEADER = "Target Support Files/SwiftyJSON/SwiftyJSON-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/SwiftyJSON/SwiftyJSON-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 10.9;
-				MODULEMAP_FILE = "Target Support Files/SwiftyJSON/SwiftyJSON.modulemap";
-				PRODUCT_MODULE_NAME = SwiftyJSON;
-				PRODUCT_NAME = SwiftyJSON;
-				SDKROOT = macosx;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 5.0;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
 		};
 		F57F07924A7682C3772EB5C5E7C427E6 /* Release */ = {
 			isa = XCBuildConfiguration;
@@ -1494,11 +1605,11 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		19C3B31DF4D80958CBFF088DC26716D9 /* Build configuration list for PBXNativeTarget "IMChatSDK-Mac" */ = {
+		0899C054E6882692C51278B15A806BAA /* Build configuration list for PBXNativeTarget "IMChatSDK-Mac-IMChatSDK" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				8DF9DEEF54F96213D7FA3681E62D6D85 /* Debug */,
-				0BFA37ADA8B022E735CFB310B981CDA5 /* Release */,
+				E677495F7D921663734EE38F9F3DEC3B /* Debug */,
+				3768B0E11AF9A490269C195C3D7B74DA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -1512,11 +1623,38 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
+		1D943E506A2C64EC8C066D0C6A269F0A /* Build configuration list for PBXNativeTarget "Starscream" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7AD2A1F71D5DDBFF7AB65ECE3E02F2D4 /* Debug */,
+				7ABCF4D4AD4F30139445CB9AFC1E51DB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		43C32216E6AB6BA4E1C9132602D28F44 /* Build configuration list for PBXNativeTarget "SwiftyJSON" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				43513F409298EDB07FB823E8A8AD3450 /* Debug */,
+				609C5C2C91014326ABB6F5C4BFCFA882 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				9382317ED75CFC741F429FC224405042 /* Debug */,
 				E4DEAC9B52796426D2A37E7074A1738D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8D4FEFC5AAE98912DD009867F749A00D /* Build configuration list for PBXNativeTarget "IMChatSDK-Mac" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7D1DEB3116AD5F86064E1D930B76924F /* Debug */,
+				0B670E35CB9E0C107067FA619914E5C6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -1530,29 +1668,11 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		CB90E94BEECAE8C9C36115B88BBFEB72 /* Build configuration list for PBXNativeTarget "SwiftyJSON" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				6835AA37156335C17D9C1C8A468F7268 /* Debug */,
-				EEEBC2ABC1138195F83D42E39F0C42B9 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 		E4A5194ABAF7A4780609E0E581DA6B54 /* Build configuration list for PBXNativeTarget "Alamofire" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				9EE85FA937C953F44540F1EB51F3C968 /* Debug */,
 				16BFAD152DDF8E2BA467E88F6ECFC2E2 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		F5AF51C40F099DF17A04DEDD084C4551 /* Build configuration list for PBXNativeTarget "Starscream" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				0ABB00A00075EDC5DF7816F58C99F056 /* Debug */,
-				E2521DA95FA90733E6DE7E940BC2C692 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
