@@ -56,4 +56,16 @@ extension NSView {
     var left: CGFloat {
         return originX
     }
+    
+    var backgroundColor: NSColor? {
+        get {
+            let color = NSColor(cgColor: self.layer?.backgroundColor ?? .clear)
+            return color
+        }
+        
+        set {
+            self.wantsLayer = true
+            self.layer?.backgroundColor = newValue?.cgColor
+        }
+    }
 }

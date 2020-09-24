@@ -29,11 +29,12 @@ TODO: Add long description of the pod here.
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
   s.platform = :osx
-  s.osx.deployment_target = "10.10"
+  s.osx.deployment_target = "10.11"
 
   s.source_files = ['Source/Core/*.{swift}',
                     'Source/*.{swift}',
-                    'Source/Http/*.{swift}']
+                    'Source/Http/*.{swift}',
+                    'Source/Views/*.{swift}']
   s.swift_version= '5.0'
   s.resource_bundles = {
     'IMChatSDK' => ['Resources/*.{xcassets,json}']
