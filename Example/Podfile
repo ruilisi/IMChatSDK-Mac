@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'IMChatSDK-Mac_Example' do
+  pod 'IMChatSDK-Mac', :path => '../'
+
+  target 'IMChatSDK-Mac_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
