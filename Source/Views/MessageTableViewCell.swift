@@ -23,8 +23,8 @@ class MessageTableViewCell: NSView {
     
     var labelfont = NSFont()
     
-    var sendEdge = NSEdgeInsets(top: 12, left: 12, bottom: 12, right: 12)
-    var receiveEdge = NSEdgeInsets(top: 12, left: 12, bottom: 12, right: 12)
+    var sendEdge = NSEdgeInsets(top: 6, left: 6, bottom: 6, right: 6)
+    var receiveEdge = NSEdgeInsets(top: 6, left: 6, bottom: 6, right: 6)
     
     var rowHeight = CGFloat()
     
@@ -48,7 +48,7 @@ class MessageTableViewCell: NSView {
         backgroundColor = .clear
         time.textColor = NSColor(red: 1, green: 1, blue: 1, alpha: 0.5)
         
-        labelfont = NSFont.systemFont(ofSize: 15, weight: .regular)
+        labelfont = NSFont.systemFont(ofSize: 14, weight: .regular)
         time.font = NSFont.systemFont(ofSize: 12, weight: .regular)
         
         label.font = labelfont
@@ -73,6 +73,7 @@ class MessageTableViewCell: NSView {
         
         label.cell?.usesSingleLineMode = false
         label.cell?.wraps = true
+        label.cell?.lineBreakMode = .byCharWrapping
         
         let cgsize = getLabelSize(text: message, attributes: [.font: labelfont], textWidth: Int(400))
         
@@ -81,7 +82,7 @@ class MessageTableViewCell: NSView {
         var timebottom: CGFloat = 0
         
         let bgWidth = labelWidth + 12
-        let bgHeight = CGFloat.maximum(labelHeight + 12, 44)
+        let bgHeight = CGFloat.maximum(labelHeight + 12, 40)
         
         print("size of :\"\(message)\" is : Width \(labelWidth) Height: \(labelHeight)")
         
@@ -96,16 +97,17 @@ class MessageTableViewCell: NSView {
             timebottom = 17
         }
         
-        bgimage.translatesAutoresizingMaskIntoConstraints = false
-        bgimage.topAnchor.constraint(equalTo: self.topAnchor, constant: timebottom).isActive = true
-        bgimage.widthAnchor.constraint(equalToConstant: bgWidth).isActive = true
-        bgimage.heightAnchor.constraint(equalToConstant: bgHeight).isActive = true
-        
         label.translatesAutoresizingMaskIntoConstraints = false
         label.centerYAnchor.constraint(equalTo: bgimage.centerYAnchor).isActive = true
-        label.leftAnchor.constraint(equalTo: bgimage.leftAnchor, constant: 6).isActive = true
-        label.widthAnchor.constraint(equalToConstant: cgsize.width).isActive = true
-        label.heightAnchor.constraint(equalToConstant: cgsize.height).isActive = true
+        label.centerXAnchor.constraint(equalTo: bgimage.centerXAnchor).isActive = true
+        label.widthAnchor.constraint(lessThanOrEqualTo: self.widthAnchor, multiplier: 0.6).isActive = true
+        label.layoutSubtreeIfNeeded()
+        
+        bgimage.translatesAutoresizingMaskIntoConstraints = false
+        bgimage.topAnchor.constraint(equalTo: self.topAnchor, constant: timebottom).isActive = true
+        bgimage.widthAnchor.constraint(equalTo: label.widthAnchor, constant: 12).isActive = true
+        bgimage.heightAnchor.constraint(equalTo: label.heightAnchor, constant: 12).isActive = true
+        self.layoutSubtreeIfNeeded()
         
         rowHeight = timebottom + bgHeight + 20.0
         
@@ -166,7 +168,7 @@ class MessageTableViewCell: NSView {
         
         //设置label最大宽度
         let size2 = CGSize(width: textWidth, height: 0)
-        
+//
         size = (text as NSString).boundingRect(with: size2, options: .usesLineFragmentOrigin, attributes: attributes, context: nil)
         
         return size
@@ -175,6 +177,11 @@ class MessageTableViewCell: NSView {
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
+    }
+    
+    override func layoutSubtreeIfNeeded() {
+        super.layoutSubtreeIfNeeded()
+        print("NMSL:\(self.bgimage.frame.height)")
     }
     
 }

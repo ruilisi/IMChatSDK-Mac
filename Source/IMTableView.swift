@@ -45,6 +45,7 @@ class IMTableView: NSView {
         super.init(frame: frameRect)
         
         self.addSubview(scrollView)
+        self.backgroundColor = .white
         
         scrollView.translatesAutoresizingMaskIntoConstraints = false
         self.addConstraints([
@@ -59,6 +60,7 @@ class IMTableView: NSView {
         messageTable.delegate = self
         messageTable.dataSource = self
         messageTable.allowsColumnSelection = false
+        messageTable.backgroundColor = .clear
         messageTable.headerView = nil
         messageTable.intercellSpacing = NSSize(width: 0, height: 10)
         
@@ -72,7 +74,7 @@ class IMTableView: NSView {
         
         for (index, item) in datas.enumerated() {
             let cell = MessageTableViewCell()
-            cell.setContent(msgID: "123123", name: "123123", message: item, timeInterval: 100000200, isSelf: index % 2 == 0 , ishideTime: true)
+            cell.setContent(msgID: "123123", name: "123123", message: item, timeInterval: 100000200, isSelf: index % 2 != 0 , ishideTime: true)
             cells.append(cell)
         }
         messageTable.reloadData()
@@ -86,7 +88,13 @@ class IMTableView: NSView {
 extension IMTableView: NSTableViewDelegate, NSTableViewDataSource {
     
     func tableView(_ tableView: NSTableView, heightOfRow row: Int) -> CGFloat {
-        print("RowHeight: \(cells[row].rowHeight)")
+//        print("RowHeight: \(cells[row].rowHeight)")
+//        cells[row].layoutSubtreeIfNeeded()
+//        print("Size of cell: \(cells[row].bgimage.frame.height)")
+//        cells[row].layoutSubtreeIfNeeded()
+        
+        cells[row].backgroundColor = row % 2 == 0 ? .red : .blue
+        
         return cells[row].rowHeight
     }
     
