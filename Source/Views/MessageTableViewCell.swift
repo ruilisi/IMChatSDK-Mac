@@ -23,8 +23,8 @@ class MessageTableViewCell: NSView {
     
     var labelfont = NSFont()
     
-    var sendEdge = NSEdgeInsets(top: 20, left: 20, bottom: 20, right: 20)
-    var receiveEdge = NSEdgeInsets(top: 20, left: 20, bottom: 20, right: 20)
+    var sendEdge = NSEdgeInsets(top: 12, left: 12, bottom: 12, right: 12)
+    var receiveEdge = NSEdgeInsets(top: 12, left: 12, bottom: 12, right: 12)
     
     var rowHeight = CGFloat()
     
@@ -46,7 +46,6 @@ class MessageTableViewCell: NSView {
         loadingLottie.backgroundBehavior = .pauseAndRestore
         
         backgroundColor = .clear
-        label.textColor = .white
         time.textColor = NSColor(red: 1, green: 1, blue: 1, alpha: 0.5)
         
         labelfont = NSFont.systemFont(ofSize: 15, weight: .regular)
@@ -75,14 +74,14 @@ class MessageTableViewCell: NSView {
         label.cell?.usesSingleLineMode = false
         label.cell?.wraps = true
         
-        let cgsize = getLabelSize(text: message, attributes: [.font: labelfont], textWidth: Int(50))
+        let cgsize = getLabelSize(text: message, attributes: [.font: labelfont], textWidth: Int(400))
         
         let labelWidth = cgsize.width
         let labelHeight = cgsize.height
         var timebottom: CGFloat = 0
         
-        let bgWidth = labelWidth + 40
-        let bgHeight = CGFloat.maximum(labelHeight + 24, 44)
+        let bgWidth = labelWidth + 12
+        let bgHeight = CGFloat.maximum(labelHeight + 12, 44)
         
         print("size of :\"\(message)\" is : Width \(labelWidth) Height: \(labelHeight)")
         
@@ -104,7 +103,7 @@ class MessageTableViewCell: NSView {
         
         label.translatesAutoresizingMaskIntoConstraints = false
         label.centerYAnchor.constraint(equalTo: bgimage.centerYAnchor).isActive = true
-        label.leftAnchor.constraint(equalTo: bgimage.leftAnchor, constant: 20).isActive = true
+        label.leftAnchor.constraint(equalTo: bgimage.leftAnchor, constant: 6).isActive = true
         label.widthAnchor.constraint(equalToConstant: cgsize.width).isActive = true
         label.heightAnchor.constraint(equalToConstant: cgsize.height).isActive = true
         
@@ -115,15 +114,15 @@ class MessageTableViewCell: NSView {
             receiveBG?.capInsets = receiveEdge
             bgimage.image = receiveBG
             
+            label.textColor = NSColor(hex: 0x333333)
             bgimage.leftAnchor.constraint(equalTo: self.leftAnchor, constant: 10).isActive = true
-            
         } else {
             sendBG?.resizingMode = .stretch
             sendBG?.capInsets = sendEdge
             bgimage.image = sendBG
-            
             bgimage.rightAnchor.constraint(equalTo: self.rightAnchor, constant: -10).isActive = true
             
+            label.textColor = .white
             loadingLottie.translatesAutoresizingMaskIntoConstraints = false
             self.addConstraints([
                 .init(item: loadingLottie, attribute: .trailing, relatedBy: .equal, toItem: bgimage, attribute: .leading, multiplier: 1, constant: -10),
