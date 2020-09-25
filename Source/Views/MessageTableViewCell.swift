@@ -72,10 +72,13 @@ class MessageTableViewCell: NSView {
         label.stringValue = "\(message)"
         
         
-        label.frame = getLabelSize(text: message, attributes: [.font: labelfont], textWidth: Int(vWidth * 0.6))
+        label.cell?.usesSingleLineMode = false
+        label.cell?.wraps = true
         
-        let labelWidth = label.frame.width
-        let labelHeight = label.frame.height
+        let cgsize = getLabelSize(text: message, attributes: [.font: labelfont], textWidth: Int(50))
+        
+        let labelWidth = cgsize.width
+        let labelHeight = cgsize.height
         var timebottom: CGFloat = 0
         
         let bgWidth = labelWidth + 40
@@ -84,6 +87,7 @@ class MessageTableViewCell: NSView {
         print("size of :\"\(message)\" is : Width \(labelWidth) Height: \(labelHeight)")
         
         hideTime = ishideTime
+        bgimage.imageScaling = .scaleAxesIndependently
         
         if !ishideTime {
             addSubview(time)
@@ -93,44 +97,32 @@ class MessageTableViewCell: NSView {
             timebottom = 17
         }
         
+        bgimage.translatesAutoresizingMaskIntoConstraints = false
+        bgimage.topAnchor.constraint(equalTo: self.topAnchor, constant: timebottom).isActive = true
+        bgimage.widthAnchor.constraint(equalToConstant: bgWidth).isActive = true
+        bgimage.heightAnchor.constraint(equalToConstant: bgHeight).isActive = true
+        
+        label.translatesAutoresizingMaskIntoConstraints = false
+        label.centerYAnchor.constraint(equalTo: bgimage.centerYAnchor).isActive = true
+        label.leftAnchor.constraint(equalTo: bgimage.leftAnchor, constant: 20).isActive = true
+        label.widthAnchor.constraint(equalToConstant: cgsize.width).isActive = true
+        label.heightAnchor.constraint(equalToConstant: cgsize.height).isActive = true
+        
+        rowHeight = timebottom + bgHeight + 20.0
+        
         if !isSelf {
             receiveBG?.resizingMode = .stretch
             receiveBG?.capInsets = receiveEdge
             bgimage.image = receiveBG
-            bgimage.imageScaling = .scaleAxesIndependently
             
-            bgimage.frame = CGRect(x: 10, y: timebottom, width: bgWidth, height: bgHeight)
-            label.frame = CGRect(x: 30, y: (bgimage.bounds.height - labelHeight) * 0.5 + timebottom, width: labelWidth, height: labelHeight)
-            rowHeight = bgimage.bottom + 20.0
-            
-            bgimage.translatesAutoresizingMaskIntoConstraints = false
             bgimage.leftAnchor.constraint(equalTo: self.leftAnchor, constant: 10).isActive = true
-            bgimage.topAnchor.constraint(equalTo: self.topAnchor, constant: timebottom).isActive = true
-            bgimage.widthAnchor.constraint(equalToConstant: bgWidth).isActive = true
-            bgimage.heightAnchor.constraint(equalToConstant: bgHeight).isActive = true
             
-            label.translatesAutoresizingMaskIntoConstraints = false
-            label.centerYAnchor.constraint(equalTo: bgimage.centerYAnchor).isActive = true
-            label.leftAnchor.constraint(equalTo: bgimage.leftAnchor, constant: 20).isActive = true
         } else {
             sendBG?.resizingMode = .stretch
             sendBG?.capInsets = sendEdge
             bgimage.image = sendBG
-            bgimage.imageScaling = .scaleAxesIndependently
             
-            bgimage.frame = CGRect(x: 0, y: timebottom, width: bgWidth, height: bgHeight)
-            label.frame = CGRect(x: bgimage.frame.origin.x + 20, y: (bgimage.bounds.height - labelHeight) * 0.5 + timebottom, width: labelWidth, height: labelHeight)
-            rowHeight = bgimage.bottom + 20.0
-            
-            bgimage.translatesAutoresizingMaskIntoConstraints = false
             bgimage.rightAnchor.constraint(equalTo: self.rightAnchor, constant: -10).isActive = true
-            bgimage.topAnchor.constraint(equalTo: self.topAnchor, constant: timebottom).isActive = true
-            bgimage.widthAnchor.constraint(equalToConstant: bgWidth).isActive = true
-            bgimage.heightAnchor.constraint(equalToConstant: bgHeight).isActive = true
-            
-            label.translatesAutoresizingMaskIntoConstraints = false
-            label.centerYAnchor.constraint(equalTo: bgimage.centerYAnchor).isActive = true
-            label.leftAnchor.constraint(equalTo: bgimage.leftAnchor, constant: 20).isActive = true
             
             loadingLottie.translatesAutoresizingMaskIntoConstraints = false
             self.addConstraints([
