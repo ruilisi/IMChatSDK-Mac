@@ -93,7 +93,7 @@ extension IMTableView: NSTableViewDelegate, NSTableViewDataSource {
 //        print("Size of cell: \(cells[row].bgimage.frame.height)")
 //        cells[row].layoutSubtreeIfNeeded()
         
-        cells[row].backgroundColor = row % 2 == 0 ? .red : .blue
+//        cells[row].backgroundColor = row % 2 == 0 ? .red : .blue
         
         return cells[row].rowHeight
     }

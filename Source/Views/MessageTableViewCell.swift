@@ -84,7 +84,7 @@ class MessageTableViewCell: NSView {
         let bgWidth = labelWidth + 12
         let bgHeight = CGFloat.maximum(labelHeight + 12, 40)
         
-        print("size of :\"\(message)\" is : Width \(labelWidth) Height: \(labelHeight)")
+//        print("size of :\"\(message)\" is : Width \(labelWidth) Height: \(labelHeight)")
         
         hideTime = ishideTime
         bgimage.imageScaling = .scaleAxesIndependently
@@ -100,16 +100,17 @@ class MessageTableViewCell: NSView {
         label.translatesAutoresizingMaskIntoConstraints = false
         label.centerYAnchor.constraint(equalTo: bgimage.centerYAnchor).isActive = true
         label.centerXAnchor.constraint(equalTo: bgimage.centerXAnchor).isActive = true
-        label.widthAnchor.constraint(lessThanOrEqualTo: self.widthAnchor, multiplier: 0.6).isActive = true
+        label.widthAnchor.constraint(lessThanOrEqualToConstant: 200).isActive = true
+//        label.widthAnchor.constraint(lessThanOrEqualTo: self.widthAnchor, multiplier: 0.7).isActive = true
+
+        label.lineBreakMode = .byCharWrapping
+        label.usesSingleLineMode = false
         label.layoutSubtreeIfNeeded()
         
         bgimage.translatesAutoresizingMaskIntoConstraints = false
-        bgimage.topAnchor.constraint(equalTo: self.topAnchor, constant: timebottom).isActive = true
+        bgimage.topAnchor.constraint(equalTo: self.topAnchor, constant: 0).isActive = true
         bgimage.widthAnchor.constraint(equalTo: label.widthAnchor, constant: 12).isActive = true
         bgimage.heightAnchor.constraint(equalTo: label.heightAnchor, constant: 12).isActive = true
-        self.layoutSubtreeIfNeeded()
-        
-        rowHeight = timebottom + bgHeight + 20.0
         
         if !isSelf {
             receiveBG?.resizingMode = .stretch
@@ -132,6 +133,10 @@ class MessageTableViewCell: NSView {
                 .init(item: loadingLottie, attribute: .width, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 1, constant: 25),
                 .init(item: loadingLottie, attribute: .height, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 1, constant: 25)])
         }
+        
+        bgimage.layoutSubtreeIfNeeded()
+        
+        rowHeight = bgimage.frame.height + 10.0
     }
     
     func getTimeStringByCurrentDate(timeInterval: TimeInterval) -> String {
@@ -177,11 +182,6 @@ class MessageTableViewCell: NSView {
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
-    }
-    
-    override func layoutSubtreeIfNeeded() {
-        super.layoutSubtreeIfNeeded()
-        print("NMSL:\(self.bgimage.frame.height)")
     }
     
 }
