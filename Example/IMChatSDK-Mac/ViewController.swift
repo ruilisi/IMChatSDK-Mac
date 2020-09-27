@@ -12,7 +12,6 @@ import IMChatSDK_Mac
 class ViewController: NSViewController {
     
     let chatView = IMChatView()
-    let button = NSButton()
     var dataconfig = UnifyDataConfig()
     
     override func viewDidLoad() {
@@ -21,7 +20,6 @@ class ViewController: NSViewController {
         // Do any additional setup after loading the view.
         
         view.addSubview(chatView)
-        view.addSubview(button)
         
         chatView.translatesAutoresizingMaskIntoConstraints = false
         view.addConstraints([
@@ -29,10 +27,6 @@ class ViewController: NSViewController {
                                 .init(item: chatView, attribute: .centerY, relatedBy: .equal, toItem: view, attribute: .centerY, multiplier: 1, constant: 0),
                                 .init(item: chatView, attribute: .width, relatedBy: .equal, toItem: view, attribute: .width, multiplier: 1, constant: 0),
                                 .init(item: chatView, attribute: .height, relatedBy: .equal, toItem: view, attribute: .height, multiplier: 1, constant: 0)])
-        
-        button.frame = CGRect(x: 0, y: 0, width: 100, height: 20)
-        button.title = "连接"
-        button.addGestureRecognizer(NSClickGestureRecognizer(target: self, action: #selector(connectClick)))
         
         dataconfig = UnifyDataConfig()
             .setApiKey(key: "f6e873f72d5a465fae785d6143adb985")
@@ -43,14 +37,6 @@ class ViewController: NSViewController {
             .setPerLoadHistoryCount(count: 2)
             .setTimeSpan(timeinterval: 200)
         
-//        chatView.buildConnection(config: dataconfig, onSuccess: {
-//            print("FKING Success")
-//        }, onFailer: {
-//            print("Nice Try")
-//        })
-    }
-    
-    @objc func connectClick() {
         chatView.buildConnection(config: dataconfig, onSuccess: {
             print("FKING Success")
         }, onFailer: {
