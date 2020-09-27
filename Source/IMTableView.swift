@@ -32,8 +32,8 @@ class IMTableView: NSView {
     
     var sendBG = NSImage(named: "bgSend")
     var receiveBG = NSImage(named: "bgReceive")
-    var sendEdge = NSEdgeInsets(top: 20, left: 20, bottom: 20, right: 20)
-    var receiveEdge = NSEdgeInsets(top: 20, left: 20, bottom: 20, right: 20)
+    var sendEdge = NSEdgeInsets(top: 6, left: 6, bottom: 6, right: 6)
+    var receiveEdge = NSEdgeInsets(top: 6, left: 6, bottom: 6, right: 6)
 
     override func draw(_ dirtyRect: NSRect) {
         super.draw(dirtyRect)
@@ -71,13 +71,69 @@ class IMTableView: NSView {
         messageTable.focusRingType = .none
         messageTable.allowsTypeSelect = false
         messageTable.selectionHighlightStyle = .none
+    }
+    
+    // MARK: 初始化SOCKET
+    func build(config: UnifyDataConfig) {
+        dataConfig = config
+        isAlive = true
+        print("isAlive: \(isAlive)")
         
-        for (index, item) in datas.enumerated() {
-            let cell = MessageTableViewCell()
-            cell.setContent(msgID: "123123", name: "123123", message: item, timeInterval: 100000200, isSelf: index % 2 != 0 , ishideTime: true)
-            cells.append(cell)
+        // 用户不一致，token过期
+        if dataConfig.username != HistoryDataAccess.userName || timeNow - HistoryDataAccess.timeRecord > 10000000 {
+            getData()
+        } else {
+            connectToWebSocket()
         }
-        messageTable.reloadData()
+    }
+    
+    // MARK: 获取连接参数
+    func getData() {
+        HttpUtil.post("https://api.chatsdk.io/customers/client_connect",
+                     params: ["name": dataConfig.username,
+                              "api_key": dataConfig.apiKey,
+                              "department_id": dataConfig.departmentid],
+                     header: [:],
+                     onFailure: { value in
+                        print(value)
+        },
+                     onSuccess: { value in
+                        print(value)
+                        HistoryDataAccess.userName = self.dataConfig.username
+                        
+                        // 用户变更
+                        if value["id"].stringValue != self.dataConfig.userID {
+                            HistoryDataAccess.historyData = []
+                            self.cleanHistory()
+                        }
+                        
+                        self.dataConfig.baseUrl = value["base"].stringValue.webSocketURL
+                        self.dataConfig.userToken = value["token"].stringValue
+                        self.dataConfig.roomID = value["rid"].stringValue
+                        self.dataConfig.userID = value["id"].stringValue
+                        self.dataConfig.wait = value["wait"].intValue
+                        HistoryDataAccess.timeRecord = timeNow
+                        self.connectToWebSocket()
+        })
+    }
+    
+    func connectToWebSocket() {
+        if !HistoryDataAccess.historyData.isEmpty {
+            if let action = completeAction { action() }
+            if cells.isEmpty {
+                insertHistory(data: HistoryDataAccess.historyData)
+            }
+        }
+        
+        socket = WebSocketHelper(baseurl: dataConfig.baseUrl)
+        socket.delegate = self
+    }
+    
+    // MARK: 清空历史
+    func cleanHistory() {
+        HistoryDataAccess.historyData = []
+        cells = []
+        self.messageTable.reloadData()
     }
     
     required init?(coder: NSCoder) {
@@ -85,21 +141,78 @@ class IMTableView: NSView {
     }
 }
 
+// MARK: UI Update
+extension IMTableView {
+    
+    // MARK: 插入行
+    func insertRow(message: MessageModel, desc: Bool = false, send: Bool = false, needhide: Bool = true) {
+        let cell = MessageTableViewCell()
+        var timeinterval = TimeInterval(message.timeInterval / 1000)
+        if message.timeInterval == 0 {
+            timeinterval = Date().timeIntervalSince1970
+        }
+
+        cell.sendEdge = sendEdge
+        cell.receiveEdge = receiveEdge
+        cell.sendBG = sendBG
+        cell.receiveBG = receiveBG
+        
+        var hidetime = false
+        
+        hidetime = !needhide ? needhide : needHide(timeInterval: Int(timeinterval), desc: desc)
+        
+        cell.setContent(msgID: message.msgID, name: message.name, message: message.message, timeInterval: timeinterval, isSelf: message.bySelf, ishideTime: hidetime)
+        
+        if message.bySelf, send {
+            cell.setLoading(isLoading: true)
+        }
+        
+        messageTable.beginUpdates()
+        
+        if !desc {
+            cells.append(cell)
+            messageTable.insertRows(at: IndexSet(integer: cells.count - 1), withAnimation: .slideRight)
+        } else {
+            cells.insert(cell, at: 0)
+            messageTable.insertRows(at: IndexSet(integer: 0), withAnimation: .slideRight)
+        }
+        
+        messageTable.endUpdates()
+    }
+    
+    func needHide(timeInterval: Int, desc: Bool = false) -> Bool {
+        var hidetime = false
+        if cells.count >= 1 {
+            if !desc {
+                let time = cells[cells.count - 1].timeInt
+                if timeInterval - time < dataConfig.timespan {
+                    hidetime = true
+                }
+            } else {
+                let time = cells[0].timeInt
+                if time - timeInterval < dataConfig.timespan {
+                    hidetime = true
+                }
+            }
+        }
+        return hidetime
+    }
+}
+
 extension IMTableView: NSTableViewDelegate, NSTableViewDataSource {
     
     func tableView(_ tableView: NSTableView, heightOfRow row: Int) -> CGFloat {
-//        print("RowHeight: \(cells[row].rowHeight)")
-//        cells[row].layoutSubtreeIfNeeded()
-//        print("Size of cell: \(cells[row].bgimage.frame.height)")
-//        cells[row].layoutSubtreeIfNeeded()
-        
-//        cells[row].backgroundColor = row % 2 == 0 ? .red : .blue
-        
-        return cells[row].rowHeight
+        if row < cells.count {
+            return cells[row].rowHeight
+        }
+        return 0
     }
     
     func tableView(_ tableView: NSTableView, viewFor tableColumn: NSTableColumn?, row: Int) -> NSView? {
-        return cells[row]
+        if row < cells.count {
+            return cells[row]
+        }
+        return nil
     }
     
     func numberOfRows(in tableView: NSTableView) -> Int {

@@ -30,7 +30,7 @@ class HttpUtil {
                      header: [String: String],
                      onFailure: ((_ error: Error) -> Void)?,
                      onSuccess: ((_ result: JSON) -> Void)?) {
-        sendRequest(url, params: defaultParams().merging(params ?? [:]) { (current, _) in current }, onFailure: onFailure, onSuccess: onSuccess, header: header, method: .post)
+        sendRequest(url, params: params, onFailure: onFailure, onSuccess: onSuccess, header: header, method: .post)
     }
     
     static func put(_ url: String,
@@ -69,7 +69,7 @@ class HttpUtil {
     
     static func defaultParams() -> Parameters {
         return [
-            "DEVICE_TYPE": "IOS",
+            "DEVICE_TYPE": "MAC",
             "locale": Locale.current.languageCode ?? "en"
         ]
     }

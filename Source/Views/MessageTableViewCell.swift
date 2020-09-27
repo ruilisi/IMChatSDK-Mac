@@ -100,7 +100,7 @@ class MessageTableViewCell: NSView {
         label.translatesAutoresizingMaskIntoConstraints = false
         label.centerYAnchor.constraint(equalTo: bgimage.centerYAnchor).isActive = true
         label.centerXAnchor.constraint(equalTo: bgimage.centerXAnchor).isActive = true
-        label.widthAnchor.constraint(lessThanOrEqualToConstant: 200).isActive = true
+        label.widthAnchor.constraint(lessThanOrEqualToConstant: 400).isActive = true
 //        label.widthAnchor.constraint(lessThanOrEqualTo: self.widthAnchor, multiplier: 0.7).isActive = true
 
         label.lineBreakMode = .byCharWrapping

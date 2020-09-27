@@ -41,22 +41,6 @@ extension NSView {
         }
     }
     
-    var bottom: CGFloat {
-        return originY + vHeight
-    }
-    
-    var top: CGFloat {
-        return originY
-    }
-    
-    var right: CGFloat {
-        return originX + vWidth
-    }
-    
-    var left: CGFloat {
-        return originX
-    }
-    
     var backgroundColor: NSColor? {
         get {
             let color = NSColor(cgColor: self.layer?.backgroundColor ?? .clear)

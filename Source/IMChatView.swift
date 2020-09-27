@@ -62,5 +62,6 @@ public extension IMChatView {
     func buildConnection(config: UnifyDataConfig, onSuccess: (() -> Void)? = nil, onFailer: (() -> Void)? = nil) {
         completeAction = onSuccess
         messageTable.errorAction = onFailer
+        messageTable.build(config: config)
     }
 }

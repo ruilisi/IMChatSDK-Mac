@@ -25,6 +25,20 @@ class ViewController: NSViewController {
                                 .init(item: chatView, attribute: .centerY, relatedBy: .equal, toItem: view, attribute: .centerY, multiplier: 1, constant: 0),
                                 .init(item: chatView, attribute: .width, relatedBy: .equal, toItem: view, attribute: .width, multiplier: 1, constant: 0),
                                 .init(item: chatView, attribute: .height, relatedBy: .equal, toItem: view, attribute: .height, multiplier: 1, constant: 0)])
+        let dataconfig = UnifyDataConfig()
+            .setApiKey(key: "f6e873f72d5a465fae785d6143adb985")
+            .setDepartmentID(did: "369d2d2b-f68b-4cf3-ba36-c588013fc511")
+            .setUserName(uname: "Test2")
+            .setWelcome(text: "你好傻逼")
+            .setLoadHistoryCount(count: 10)
+            .setPerLoadHistoryCount(count: 2)
+            .setTimeSpan(timeinterval: 200)
+        
+        chatView.buildConnection(config: dataconfig, onSuccess: {
+            print("FKING Success")
+        }, onFailer: {
+            print("Nice Try")
+        })
         
     }
     
