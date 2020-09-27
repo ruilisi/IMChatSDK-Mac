@@ -157,17 +157,21 @@ extension IMTableView {
         cell.sendBG = sendBG
         cell.receiveBG = receiveBG
         
-        var hidetime = false
-        
-        hidetime = !needhide ? needhide : needHide(timeInterval: Int(timeinterval), desc: desc)
-        
-        cell.setContent(msgID: message.msgID, name: message.name, message: message.message, timeInterval: timeinterval, isSelf: message.bySelf, ishideTime: hidetime)
-        
-        if message.bySelf, send {
-            cell.setLoading(isLoading: true)
-        }
-        
         DispatchQueue.main.async {
+            var hidetime = false
+            
+            if needhide {
+                hidetime = self.needHide(timeInterval: Int(timeinterval), desc: desc)
+            }
+            
+            //        hidetime = !needhide ? needhide : needHide(timeInterval: Int(timeinterval), desc: desc)
+            
+            cell.setContent(msgID: message.msgID, name: message.name, message: message.message, timeInterval: timeinterval, isSelf: message.bySelf, ishideTime: hidetime)
+            
+            if message.bySelf, send {
+                cell.setLoading(isLoading: true)
+            }
+            
             self.addCellRow(cell: cell, desc: desc, byself: message.bySelf)
         }
     }

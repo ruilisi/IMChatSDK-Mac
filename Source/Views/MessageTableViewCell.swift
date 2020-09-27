@@ -46,7 +46,7 @@ class MessageTableViewCell: NSView {
         loadingLottie.backgroundBehavior = .pauseAndRestore
         
         setBackgroundColor = .clear
-        time.textColor = NSColor(red: 1, green: 1, blue: 1, alpha: 0.5)
+        time.textColor = NSColor(hex: 0x000000, alpha: 0.5)
         
         labelfont = NSFont.systemFont(ofSize: 14, weight: .regular)
         time.font = NSFont.systemFont(ofSize: 12, weight: .regular)
@@ -89,14 +89,6 @@ class MessageTableViewCell: NSView {
         hideTime = ishideTime
         bgimage.imageScaling = .scaleAxesIndependently
         
-        if !ishideTime {
-            addSubview(time)
-            time.stringValue = getTimeStringByCurrentDate(timeInterval: timeInterval)
-            time.frame = CGRect(x: 0, y: 0, width: vWidth, height: 15)
-            time.alignment = .center
-            timebottom = 17
-        }
-        
         label.translatesAutoresizingMaskIntoConstraints = false
         label.centerYAnchor.constraint(equalTo: bgimage.centerYAnchor).isActive = true
         label.centerXAnchor.constraint(equalTo: bgimage.centerXAnchor).isActive = true
@@ -108,7 +100,7 @@ class MessageTableViewCell: NSView {
         label.layoutSubtreeIfNeeded()
         
         bgimage.translatesAutoresizingMaskIntoConstraints = false
-        bgimage.topAnchor.constraint(equalTo: self.topAnchor, constant: 0).isActive = true
+        bgimage.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: 0).isActive = true
         bgimage.widthAnchor.constraint(equalTo: label.widthAnchor, constant: 12).isActive = true
         bgimage.heightAnchor.constraint(equalTo: label.heightAnchor, constant: 12).isActive = true
         
@@ -136,7 +128,19 @@ class MessageTableViewCell: NSView {
         
         bgimage.layoutSubtreeIfNeeded()
         
-        rowHeight = bgimage.frame.height + 10.0
+        if !ishideTime {
+            addSubview(time)
+            time.stringValue = getTimeStringByCurrentDate(timeInterval: timeInterval)
+            time.frame = CGRect(x: 0, y: bgimage.frame.height + 10.0, width: vWidth, height: 15)
+            time.alignment = .center
+            
+            time.translatesAutoresizingMaskIntoConstraints = false
+            time.centerXAnchor.constraint(equalTo: self.centerXAnchor).isActive = true
+            time.bottomAnchor.constraint(equalTo: bgimage.topAnchor).isActive = true
+            time.layoutSubtreeIfNeeded()
+        }
+        
+        rowHeight = bgimage.frame.height + time.frame.height
     }
     
     func getTimeStringByCurrentDate(timeInterval: TimeInterval) -> String {
