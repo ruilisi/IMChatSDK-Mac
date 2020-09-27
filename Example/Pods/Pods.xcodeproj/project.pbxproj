@@ -43,6 +43,7 @@
 		2D7670D802558BD13D61FC11B635E9AB /* InvertedMatteLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31473414669D6D9DA5B357412EAA1E42 /* InvertedMatteLayer.swift */; };
 		2F840C902520578C00595CAF /* MessageTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F840C8F2520578C00595CAF /* MessageTextField.swift */; };
 		2F840C9A2520679800595CAF /* XButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F840C992520679800595CAF /* XButton.swift */; };
+		2F840CA4252071A900595CAF /* NSScrollView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F840CA3252071A900595CAF /* NSScrollView+Extension.swift */; };
 		32E6C7A77713A4F063C3774B0DE0DBFE /* GroupOutputNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF2BB0108C9E358B4FF959097813044C /* GroupOutputNode.swift */; };
 		339F159A32C878F5BFD1DBD2B6AD7793 /* AppKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8BDD543B77498AB5E8DC559A731A6DA9 /* AppKit.framework */; };
 		3406638088110A2228F6BB33B7E31568 /* ColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB89D256A27708D4BA3316A98099AC18 /* ColorExtension.swift */; };
@@ -345,6 +346,7 @@
 		2E025C5727A4E0FADA6642016EE8E04F /* TextDocument.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TextDocument.swift; path = "lottie-swift/src/Private/Model/Text/TextDocument.swift"; sourceTree = "<group>"; };
 		2F840C8F2520578C00595CAF /* MessageTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MessageTextField.swift; path = Source/Views/MessageTextField.swift; sourceTree = "<group>"; };
 		2F840C992520679800595CAF /* XButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = XButton.swift; path = Source/Views/XButton.swift; sourceTree = "<group>"; };
+		2F840CA3252071A900595CAF /* NSScrollView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "NSScrollView+Extension.swift"; path = "Source/NSScrollView+Extension.swift"; sourceTree = "<group>"; };
 		2FA23764DED60893245D33EE6B55F384 /* Shape.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Shape.swift; path = "lottie-swift/src/Private/Model/ShapeItems/Shape.swift"; sourceTree = "<group>"; };
 		2FF95F1407B711E5B2E489A3AA0CD2F9 /* Pods-IMChatSDK-Mac_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-IMChatSDK-Mac_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		3036041E388CA357357C3E75B25F3E4F /* AnimationKeypath.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AnimationKeypath.swift; path = "lottie-swift/src/Public/DynamicProperties/AnimationKeypath.swift"; sourceTree = "<group>"; };
@@ -1069,6 +1071,7 @@
 				73A4007B4242625729DE3BC567F98A14 /* ImInfo.swift */,
 				AA9EE1C25E4E1BA1DF63AE75BA892C1A /* IMTableView.swift */,
 				E77656FB86E4D745F703497F6F434C21 /* IMTableView+Extension.swift */,
+				2F840CA3252071A900595CAF /* NSScrollView+Extension.swift */,
 				12E059736CECEB2919CBEB9AFF6EC14F /* Int+Extension.swift */,
 				3A79ACB66351AD841F0AE8877AD40095 /* MessageModel.swift */,
 				BDFCEBAD720DFAC7BA4BD8A3ECD04199 /* NSColor+Extension.swift */,
@@ -1631,6 +1634,7 @@
 				69A1DE604D1B8F3A2FC018E1D0FC157F /* IMTableView.swift in Sources */,
 				B1B6C1D1F7B7ABE49E39E2BDAF5D3498 /* Int+Extension.swift in Sources */,
 				C2B9E07E0C9A5E32BD59557D474C2E28 /* MessageModel.swift in Sources */,
+				2F840CA4252071A900595CAF /* NSScrollView+Extension.swift in Sources */,
 				6C1EFDA78842EADF0950C687492938C0 /* MessageTableViewCell.swift in Sources */,
 				F69134BE76D1215905503ECABD9853BF /* NSColor+Extension.swift in Sources */,
 				6656C14B9C148D4536676BCEB2073916 /* NSLabel.swift in Sources */,

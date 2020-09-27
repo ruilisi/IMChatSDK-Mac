@@ -184,6 +184,10 @@ extension IMTableView {
         }
         
         messageTable.endUpdates()
+        
+        if !desc {
+            scrollView.scrollToBottom()
+        }
     }
     
     func needHide(timeInterval: Int, desc: Bool = false) -> Bool {
