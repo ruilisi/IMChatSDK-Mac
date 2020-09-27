@@ -160,11 +160,7 @@ extension IMTableView {
         DispatchQueue.main.async {
             var hidetime = false
             
-            if needhide {
-                hidetime = self.needHide(timeInterval: Int(timeinterval), desc: desc)
-            }
-            
-            //        hidetime = !needhide ? needhide : needHide(timeInterval: Int(timeinterval), desc: desc)
+            hidetime = !needhide ? needhide : self.needHide(timeInterval: Int(timeinterval), desc: desc)
             
             cell.setContent(msgID: message.msgID, name: message.name, message: message.message, timeInterval: timeinterval, isSelf: message.bySelf, ishideTime: hidetime)
             
