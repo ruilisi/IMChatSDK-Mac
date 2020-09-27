@@ -167,14 +167,20 @@ extension IMTableView {
             cell.setLoading(isLoading: true)
         }
         
+        DispatchQueue.main.async {
+            self.addCellRow(cell: cell, desc: desc, byself: message.bySelf)
+        }
+    }
+    
+    func addCellRow(cell: MessageTableViewCell, desc: Bool, byself: Bool) {
         messageTable.beginUpdates()
         
         if !desc {
             cells.append(cell)
-            messageTable.insertRows(at: IndexSet(integer: cells.count - 1), withAnimation: .slideRight)
+            messageTable.insertRows(at: IndexSet(integer: cells.count - 1), withAnimation: byself ? .slideRight : .slideLeft)
         } else {
             cells.insert(cell, at: 0)
-            messageTable.insertRows(at: IndexSet(integer: 0), withAnimation: .slideRight)
+            messageTable.insertRows(at: IndexSet(integer: 0), withAnimation: byself ? .slideRight : .slideLeft)
         }
         
         messageTable.endUpdates()
