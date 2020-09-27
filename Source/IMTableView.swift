@@ -45,7 +45,7 @@ class IMTableView: NSView {
         super.init(frame: frameRect)
         
         self.addSubview(scrollView)
-        self.backgroundColor = .white
+        self.setBackgroundColor = NSColor(hex: 0xFCFDFF)
         
         scrollView.translatesAutoresizingMaskIntoConstraints = false
         self.addConstraints([

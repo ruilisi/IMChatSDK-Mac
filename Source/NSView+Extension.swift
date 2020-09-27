@@ -41,7 +41,7 @@ extension NSView {
         }
     }
     
-    var backgroundColor: NSColor? {
+    var setBackgroundColor: NSColor? {
         get {
             let color = NSColor(cgColor: self.layer?.backgroundColor ?? .clear)
             return color

@@ -45,7 +45,7 @@ class MessageTableViewCell: NSView {
         loadingLottie.loopMode = .loop
         loadingLottie.backgroundBehavior = .pauseAndRestore
         
-        backgroundColor = .clear
+        setBackgroundColor = .clear
         time.textColor = NSColor(red: 1, green: 1, blue: 1, alpha: 0.5)
         
         labelfont = NSFont.systemFont(ofSize: 14, weight: .regular)

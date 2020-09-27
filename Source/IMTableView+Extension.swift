@@ -317,6 +317,30 @@ extension IMTableView {
         
         socket.getHistory(dataConfig.roomID, count, timeInterval)
     }
+    
+    // MARK: - 发送消息
+    func sendMessage(message: String) {
+        
+        let msgID = createID()
+        
+        let msg = MessageModel(
+            msgID: msgID,
+            name: "",
+            message: message,
+            timeInterval: Int(Date().timeIntervalSince1970) * 1000,
+            roomID: dataConfig.roomID,
+            bySelf: true)
+        
+        insertRow(message: msg, send: true)
+        
+        sendingList.append([msgID, message])
+        
+        if sendingList.count == 1 {
+            socket.sendMsg(sendingList[0][0], sendingList[0][1], dataConfig.roomID)
+        }
+        
+        print("befaoreSendingList:\(sendingList)")
+    }
 }
 
 // MARK: 界面
