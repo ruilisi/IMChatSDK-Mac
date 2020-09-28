@@ -11,7 +11,7 @@ open class IMChatView: NSView {
     
     let messageTable = IMTableView()
     let bottomView = NSView()
-    let inputView = MessageTextField()
+    let inputView = PlaceholderTextView()
     let sendButton = XButton()
     
     var completeAction: (() -> Void)? {
@@ -58,6 +58,10 @@ open class IMChatView: NSView {
         inputView.widthAnchor.constraint(equalTo: bottomView.widthAnchor, multiplier: 0.8).isActive = true
         inputView.heightAnchor.constraint(equalTo: bottomView.heightAnchor, multiplier: 0.67).isActive = true
         inputView.layoutSubtreeIfNeeded()
+        inputView.placeholderAttributedString = NSAttributedString(
+            string: "说点什么吧",
+            attributes: [
+                NSAttributedString.Key.foregroundColor: NSColor(hex: 0xABABAD)])
         
         bottomView.addSubview(sendButton)
         sendButton.translatesAutoresizingMaskIntoConstraints = false
@@ -73,9 +77,9 @@ open class IMChatView: NSView {
     }
     
     func sendClick() {
-        if !inputView.stringValue.isEmpty {
-            messageTable.sendMessage(message: inputView.stringValue)
-            inputView.stringValue = ""
+        if !inputView.string.isEmpty {
+            messageTable.sendMessage(message: inputView.string)
+            inputView.string = ""
         }
     }
     
