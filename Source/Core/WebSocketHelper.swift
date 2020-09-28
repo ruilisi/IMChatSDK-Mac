@@ -188,6 +188,9 @@ open class WebSocketHelper {
         print("Send text: \(cmd)")
         self.socket?.write(string: cmd, completion: {
             print("\(self.pingCount) ping Success")
+            if self.pingCount == 0 {
+                historyFlag = true
+            }
             self.pingCount += 1
         })
     }

@@ -125,13 +125,13 @@ extension IMTableView: WebSocketDelegate {
 //            if let action = errorAction { action() }
         }
         
-        if errordata.code == 50 {
+//        if errordata.code == 50 {
             lossConnect = true
             
             if lossTimeInterval == 0 {
                 lossTimeInterval = Int(Date().timeIntervalSince1970) * 1000
             }
-        }
+//        }
         
         guard isAlive else { return }
         
@@ -165,10 +165,6 @@ extension IMTableView {
         if type == "changed" {
             let data = jsondata["fields"]
             receiveMessage(data: data)
-        }
-        
-        if type == "pong" {
-//            setRefresh()
         }
         
         return
@@ -211,6 +207,11 @@ extension IMTableView {
             insertRow(message: item, desc: true, needhide: index != data.count - 1)    //插入到第0行
             HistoryDataAccess.insertMessage(messag: item)
         }
+        
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+            historyFlag = true
+        }
+        
         return
     }
     
@@ -341,9 +342,4 @@ extension IMTableView {
         
         print("befaoreSendingList:\(sendingList)")
     }
-}
-
-// MARK: 界面
-extension IMTableView {
-    
 }

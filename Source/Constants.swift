@@ -16,6 +16,8 @@ func createID(_ seed: String = unmistakableChars) -> String {
     return result
 }
 
+var historyFlag = false
+
 //public let datas: [String] = [
 //    "您好，有什么可以帮到您的吗？我们将根据您的出价来绝对我们对您的服务态度，所以你他妈给我想清楚了。",
 //    "您好，我想白嫖。",

@@ -29,6 +29,7 @@ class IMTableView: NSView {
     var errorAction: (() -> Void)?
     var completeAction: (() -> Void)?
     var dataConfig = UnifyDataConfig()
+    var nsclipView = NSView()
     
     var sendBG = NSImage(named: "bgSend")
     var receiveBG = NSImage(named: "bgReceive")
@@ -71,6 +72,18 @@ class IMTableView: NSView {
         messageTable.focusRingType = .none
         messageTable.allowsTypeSelect = false
         messageTable.selectionHighlightStyle = .none
+        messageTable.layoutSubtreeIfNeeded()
+        
+        if let clipView = self.messageTable.superview, let sv = clipView.superview as? NSScrollView{
+            nsclipView = clipView
+            let contentView = sv.contentView
+            contentView.postsBoundsChangedNotifications = true
+            
+            NotificationCenter.default.addObserver(self,
+                                                   selector: #selector(collectionViewDidScroll(notification:)),
+                                                   name: NSView.boundsDidChangeNotification,
+                                                   object: clipView)
+        }
     }
     
     // MARK: 初始化SOCKET
@@ -186,7 +199,9 @@ extension IMTableView {
         messageTable.endUpdates()
         
         if !desc {
-            scrollView.scrollToBottom()
+            messageTable.scrollToEndOfDocument(self)
+        } else {
+            messageTable.scrollToBeginningOfDocument(self)
         }
     }
     
@@ -227,5 +242,27 @@ extension IMTableView: NSTableViewDelegate, NSTableViewDataSource {
     
     func numberOfRows(in tableView: NSTableView) -> Int {
         return cells.count
+    }
+}
+
+extension IMTableView {
+    @objc func collectionViewDidScroll(notification: NSNotification) {
+        
+        guard let documentView = scrollView.documentView else { return }
+        
+        let clipView = scrollView.contentView
+        print("Table Frame:\(clipView.bounds.origin.y)")
+        
+        if clipView.bounds.origin.y < 0, historyFlag {
+            print("GetHistory")
+            historyFlag = false
+            getHistory(type: .latest, count: dataConfig.perCount)
+        }
+        
+        if clipView.bounds.origin.y == 0 {
+            print("bottom")
+        } else if clipView.bounds.origin.y + clipView.bounds.height == documentView.bounds.height {
+            print("top")
+        }
     }
 }
