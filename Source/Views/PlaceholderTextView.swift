@@ -22,6 +22,15 @@ class PlaceholderTextView: NSTextView {
         self.layer?.cornerRadius = 2
     }
     
+    override init(frame frameRect: NSRect) {
+        super.init(frame: frameRect)
+        delegate = self
+    }
+    
+    override init(frame frameRect: NSRect, textContainer container: NSTextContainer?) {
+        super.init(frame: frameRect, textContainer: container)
+        delegate = self
+    }
     override func becomeFirstResponder() -> Bool {
         
         let flag = super.becomeFirstResponder()
@@ -31,5 +40,35 @@ class PlaceholderTextView: NSTextView {
             
         }
         return flag
+    }
+    
+    override var intrinsicContentSize: NSSize {
+        guard let manager = textContainer?.layoutManager else {
+            return .zero
+        }
+        
+        manager.ensureLayout(for: textContainer!)
+        
+        var size = manager.usedRect(for: textContainer!).size
+        
+        if size.height > 100 {
+            size = CGSize(width: size.width, height: 100)
+        } else if size.height < 30 {
+            size = CGSize(width: size.width, height: 30)
+        }
+        
+        print("Current textviewsize:\(size)")
+        return size
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
+}
+
+extension PlaceholderTextView: NSTextViewDelegate {
+    func textDidChange(_ notification: Notification) {
+        invalidateIntrinsicContentSize()
     }
 }
