@@ -13,6 +13,7 @@ open class WebSocketHelper {
     
     var index = 0
     var socket: WebSocket?
+    var config = UnifyDataConfig()
     private var dokidoki: Timer?
     private var connectionstate = false
     var isConnected: Bool {
@@ -58,7 +59,8 @@ open class WebSocketHelper {
     }
     
     // MARK: - 连接服务器
-    public func connectServer() {
+    public func connectServer(config: UnifyDataConfig) {
+        self.config = config
         guard let websocket = socket else { return }
         let dict = [
             "msg": "connect",
@@ -75,18 +77,15 @@ open class WebSocketHelper {
     // MARK: - 登录服务器
     /**
            这个函数进行了登录操作
-    
-           - parameters:
-               - token: 用户的Token
     */
-    public func loginServer(_ token: String) {
+    public func loginServer() {
         guard let websocket = socket else { return }
         let dict = [
             "id": "1",
             "method": "login",
             "msg": "method",
             "params": [
-                ["resume": "\(token)"]
+                ["resume": "\(config.userToken)"]
             ]] as [String: Any]
         let cmd = dictToJsonStr(dict)
         print("Send text: \(cmd)")
@@ -96,12 +95,12 @@ open class WebSocketHelper {
     }
     
     // MARK: - 接入服务器
-    public func subServer(_ id: String, _ myID: String) {
+    public func subServer() {
         guard let websocket = socket else { return }
-        let dict = ["id": id,
+        let dict = ["id": Helper.createID(),
                     "msg": "sub",
-                    "name": "stream-notify-user",
-                    "params": ["\(myID)/notification", [
+                    "name": "stream-room-messages",
+                    "params": ["\(config.roomID)", [
                         "args": [],
                         "useCollection": false
                         ]]] as [String: Any]
@@ -186,11 +185,15 @@ open class WebSocketHelper {
             return
         }
         print("Send text: \(cmd)")
+        
+        if pingCount > 1 {
+            connectServer(config: self.config)
+            loginServer()
+            subServer()
+        }
+        
         self.socket?.write(string: cmd, completion: {
             print("\(self.pingCount) ping Success")
-            if self.pingCount == 0 {
-                historyFlag = true
-            }
             self.pingCount += 1
         })
     }

@@ -14,11 +14,28 @@ class ViewController: NSViewController {
     let chatView = IMChatView()
     var dataconfig = UnifyDataConfig()
     
+    let scrollView = NSScrollView()
+    let textView = NSTextView()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         // Do any additional setup after loading the view.
         
+        view.addSubview(scrollView)
+
+//        scrollView.frame = CGRect(x: 0, y: 0, width: 500, height: 200)
+//        scrollView.documentView = textView
+//
+//        scrollView.hasHorizontalScroller = true
+//        textView.maxSize = NSMakeSize(.greatestFiniteMagnitude, .greatestFiniteMagnitude)
+//        textView.isHorizontallyResizable = true
+//        textView.textContainer?.widthTracksTextView = false
+//        textView.textContainer?.containerSize = NSMakeSize(.greatestFiniteMagnitude, .greatestFiniteMagnitude)
+        setChatView()
+    }
+    
+    func setChatView() {
         view.addSubview(chatView)
         
         chatView.translatesAutoresizingMaskIntoConstraints = false

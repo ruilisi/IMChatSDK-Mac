@@ -57,9 +57,9 @@ extension IMTableView: WebSocketDelegate {
         if let value = token {
             dataConfig.userToken = value
         }
-        socket.connectServer()
-        socket.loginServer(dataConfig.userToken)
-        socket.subServer(createID(), dataConfig.userID)
+        socket.connectServer(config: dataConfig)
+        socket.loginServer()
+        socket.subServer()
     }
     
     // MARK: 成功连接
@@ -156,9 +156,6 @@ extension IMTableView {
                 historyHandel(list: list)
             } else if let list = jsondata["result"].array {
                 insertMissingMessage(list: list)
-            } else {
-                let msgjson = jsondata["result"]
-                sendComplete(msgjson: msgjson)
             }
         }
         
@@ -215,49 +212,40 @@ extension IMTableView {
         return
     }
     
-    // MARK: 信息发送成功回调
-    func sendComplete(msgjson: JSON) {
-        let message = MessageModel(
-            msgID: msgjson["_id"].stringValue,
-            name: msgjson["u"]["name"].stringValue,
-            message: msgjson["msg"].stringValue,
-            timeInterval: msgjson["ts"]["$date"].intValue,
-            roomID: msgjson["rid"].stringValue,
-            bySelf: msgjson["u"]["_id"].stringValue == dataConfig.userID)
-        
-        guard !message.msgID.isEmpty else { return }
-        
-        if let index = sendingList.firstIndex(of: [message.msgID, message.message]) {
-            sendingList.remove(at: index)
-        }
-        
-        HistoryDataAccess.appendMessage(message: message)
-        
-        print("afterSendingList:\(sendingList)")
-        print("send Complete- ts:\(msgjson["ts"]["$date"].intValue), update:\(msgjson["_updatedAt"]["$date"].intValue), difference:\(msgjson["ts"]["$date"].intValue - msgjson["_updatedAt"]["$date"].intValue)")
-        //        rxSendingList.accept(sendingList)
-        sendNext()
-        
-        let cell = cells.first(where: { $0.messageID == message.msgID })
-        
-        cell?.setLoading(isLoading: false)
-    }
-    
     // MARK: 收到消息
     func receiveMessage(data: JSON) {
         if let msgs = data["args"].array, !msgs.isEmpty {
             for item in msgs {
                 let message = MessageModel(
-                    msgID: item["payload"]["_id"].stringValue,
-                    name: item["payload"]["sender"]["username"].stringValue,
-                    message: item["payload"]["message"]["msg"].stringValue,
-                    timeInterval: Int(Date().timeIntervalSince1970 * 1000),
-                    roomID: item["payload"]["rid"].stringValue,
-                    bySelf: item["payload"]["sender"]["_id"].stringValue == dataConfig.userID)
+                    msgID: item["_id"].stringValue,
+                    name: item["u"]["username"].stringValue,
+                    message: item["msg"].stringValue,
+                    timeInterval: item["ts"]["$date"].intValue,
+                    roomID: item["rid"].stringValue,
+                    bySelf: item["u"]["_id"].stringValue == dataConfig.userID)
+                
+                let sameMSG = HistoryDataAccess.historyData.filter{ $0.msgID == message.msgID }
+                guard sameMSG.isEmpty else { continue }
                 
                 HistoryDataAccess.appendMessage(message: message)
-                insertRow(message: message)
+                guard !message.msgID.isEmpty else { continue }
+                
+                if let index = sendingList.firstIndex(of: [message.msgID, message.message]) {
+                    sendingList.remove(at: index)
+                }
+                
+                print("afterSendingList:\(sendingList)")
+                
+                let cell = cells.first(where: { $0.messageID == message.msgID })
+                if let msgcell = cell {
+                    msgcell.setLoading(isLoading: false)
+                } else {
+                    insertRow(message: message)
+                }
+                
             }
+            
+            sendNext()
         }
     }
     
@@ -322,7 +310,7 @@ extension IMTableView {
     // MARK: - 发送消息
     func sendMessage(message: String) {
         
-        let msgID = createID()
+        let msgID = Helper.createID()
         
         let msg = MessageModel(
             msgID: msgID,

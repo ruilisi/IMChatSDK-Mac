@@ -75,17 +75,6 @@ class MessageTableViewCell: NSView {
         label.cell?.wraps = true
         label.cell?.lineBreakMode = .byCharWrapping
         
-        let cgsize = getLabelSize(text: message, attributes: [.font: labelfont], textWidth: Int(400))
-        
-        let labelWidth = cgsize.width
-        let labelHeight = cgsize.height
-        var timebottom: CGFloat = 0
-        
-        let bgWidth = labelWidth + 12
-        let bgHeight = CGFloat.maximum(labelHeight + 12, 40)
-        
-//        print("size of :\"\(message)\" is : Width \(labelWidth) Height: \(labelHeight)")
-        
         hideTime = ishideTime
         bgimage.imageScaling = .scaleAxesIndependently
         

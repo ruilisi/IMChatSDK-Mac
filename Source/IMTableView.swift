@@ -171,6 +171,12 @@ extension IMTableView {
         cell.receiveBG = receiveBG
         
         DispatchQueue.main.async {
+            let filcell = self.cells.filter {
+                return $0.messageID == message.msgID
+            }
+            
+            guard filcell.isEmpty else { return }
+            
             var hidetime = false
             
             hidetime = !needhide ? needhide : self.needHide(timeInterval: Int(timeinterval), desc: desc)
