@@ -45,6 +45,7 @@
 		2C61B040BA6A9A7AE66C4D9BA26D5520 /* SessionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51EE7EBE3CEC85045C3321EA6B05AAC9 /* SessionDelegate.swift */; };
 		2D682559EACDCC3ADD8804E7147A3EE9 /* WebSocket.swift in Sources */ = {isa = PBXBuildFile; fileRef = D486E1FD9F9BA7DCE4B6D47E2ED16B92 /* WebSocket.swift */; };
 		2F73DF1A252351BA00403FD4 /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F73DF19252351BA00403FD4 /* Helper.swift */; };
+		2F73DF242524142E00403FD4 /* MessageInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F73DF232524142E00403FD4 /* MessageInputView.swift */; };
 		2FCFF0AB25218FF900B3B123 /* PlaceholderTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FCFF0AA25218FF900B3B123 /* PlaceholderTextView.swift */; };
 		30D20357CEB65AE8B92DF999C26C2B4B /* AnimatorNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = E04EB77D80CCC8293CEA562485FD903E /* AnimatorNode.swift */; };
 		315E9F6C4FF49E90436137110C37AFC9 /* Animation.swift in Sources */ = {isa = PBXBuildFile; fileRef = C01EA716AEF9157C2B132E4D3D408151 /* Animation.swift */; };
@@ -347,6 +348,7 @@
 		2C226792735D0094E45D0633111A8F08 /* Group.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Group.swift; path = "lottie-swift/src/Private/Model/ShapeItems/Group.swift"; sourceTree = "<group>"; };
 		2E025C5727A4E0FADA6642016EE8E04F /* TextDocument.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TextDocument.swift; path = "lottie-swift/src/Private/Model/Text/TextDocument.swift"; sourceTree = "<group>"; };
 		2F73DF19252351BA00403FD4 /* Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
+		2F73DF232524142E00403FD4 /* MessageInputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageInputView.swift; sourceTree = "<group>"; };
 		2FA23764DED60893245D33EE6B55F384 /* Shape.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Shape.swift; path = "lottie-swift/src/Private/Model/ShapeItems/Shape.swift"; sourceTree = "<group>"; };
 		2FCFF0AA25218FF900B3B123 /* PlaceholderTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceholderTextView.swift; sourceTree = "<group>"; };
 		2FF95F1407B711E5B2E489A3AA0CD2F9 /* Pods-IMChatSDK-Mac_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-IMChatSDK-Mac_Tests.release.xcconfig"; sourceTree = "<group>"; };
@@ -660,6 +662,7 @@
 			children = (
 				AA0DABADBB2F1109044C1E73065639D7 /* MessageTableViewCell.swift */,
 				F982FFB37C79015B4BDC6AAEB1C4F77B /* MessageTextField.swift */,
+				2F73DF232524142E00403FD4 /* MessageInputView.swift */,
 				2FCFF0AA25218FF900B3B123 /* PlaceholderTextView.swift */,
 				0FD6C3E5147A676DFACBC12AA0F54648 /* NSLabel.swift */,
 				83D4E1CEB51ADF7EAD91A0BF03AAFEE2 /* XButton.swift */,
@@ -1497,6 +1500,7 @@
 				D4C243A39B60A03DA1AD0D0B351FEA39 /* IMChatSDK-Mac-dummy.m in Sources */,
 				9C48BF4F2D3C9F6B99D3302D124A3B9C /* IMChatView.swift in Sources */,
 				5044B8886EE4DD0D0F66CD49BA55291F /* ImInfo.swift in Sources */,
+				2F73DF242524142E00403FD4 /* MessageInputView.swift in Sources */,
 				81C9D836EF45ABDF9647FB998A9EC9B6 /* IMTableView+Extension.swift in Sources */,
 				0BE5F10C1A8F420497C5BD8FD71766FE /* IMTableView.swift in Sources */,
 				8705B632D9C42A3810CC4255C2E2C86E /* Int+Extension.swift in Sources */,

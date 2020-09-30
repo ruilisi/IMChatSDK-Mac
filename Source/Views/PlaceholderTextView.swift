@@ -12,6 +12,15 @@ class PlaceholderTextView: NSTextView {
     override func draw(_ dirtyRect: NSRect) {
         super.draw(dirtyRect)
         // Drawing code here.
+        setinit()
+    }
+    
+    override init(frame frameRect: NSRect) {
+        super.init(frame: frameRect)
+        setinit()
+    }
+    
+    func setinit() {
         
         self.textColor = NSColor(hex: 0x333333)
         self.backgroundColor = NSColor(hex: 0xFCFDFF)
@@ -20,16 +29,12 @@ class PlaceholderTextView: NSTextView {
         self.autoresizesSubviews = true
         self.wantsLayer = true
         self.layer?.cornerRadius = 2
-    }
-    
-    override init(frame frameRect: NSRect) {
-        super.init(frame: frameRect)
-        delegate = self
+//        delegate = self
     }
     
     override init(frame frameRect: NSRect, textContainer container: NSTextContainer?) {
         super.init(frame: frameRect, textContainer: container)
-        delegate = self
+        setinit()
     }
     override func becomeFirstResponder() -> Bool {
         
@@ -42,24 +47,24 @@ class PlaceholderTextView: NSTextView {
         return flag
     }
     
-    override var intrinsicContentSize: NSSize {
-        guard let manager = textContainer?.layoutManager else {
-            return .zero
-        }
-        
-        manager.ensureLayout(for: textContainer!)
-        
-        var size = manager.usedRect(for: textContainer!).size
-        
-        if size.height > 100 {
-            size = CGSize(width: size.width, height: 100)
-        } else if size.height < 30 {
-            size = CGSize(width: size.width, height: 30)
-        }
-        
-        print("Current textviewsize:\(size)")
-        return size
-    }
+//    override var intrinsicContentSize: NSSize {
+//        guard let manager = textContainer?.layoutManager else {
+//            return .zero
+//        }
+//        
+//        manager.ensureLayout(for: textContainer!)
+//        
+//        var size = manager.usedRect(for: textContainer!).size
+//        
+//        if size.height > 100 {
+//            size = CGSize(width: size.width, height: 100)
+//        } else if size.height < 30 {
+//            size = CGSize(width: size.width, height: 30)
+//        }
+//        
+//        print("Current textviewsize:\(size)")
+//        return size
+//    }
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")

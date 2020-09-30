@@ -11,7 +11,7 @@ open class IMChatView: NSView {
     
     let messageTable = IMTableView()
     let bottomView = NSView()
-    var inputView = PlaceholderTextView()
+    var inputView = MessageInputView()
     let scView = NSScrollView()
     let sendButton = XButton()
     var bottomViewAnchor = NSLayoutConstraint()
@@ -38,6 +38,7 @@ open class IMChatView: NSView {
         bottomView.bottomAnchor.constraint(equalTo: self.bottomAnchor).isActive = true
         bottomView.centerXAnchor.constraint(equalTo: self.centerXAnchor).isActive = true
         bottomView.widthAnchor.constraint(equalTo: self.widthAnchor).isActive = true
+        bottomView.heightAnchor.constraint(equalToConstant: 100).isActive = true
         
         messageTable.translatesAutoresizingMaskIntoConstraints = false
         messageTable.centerXAnchor.constraint(equalTo: self.centerXAnchor).isActive = true
@@ -51,30 +52,30 @@ open class IMChatView: NSView {
     }
     
     func setBottomView() {
-        inputView = PlaceholderTextView(frame: CGRect(x: 10, y: 10, width: 400, height: 30))
         bottomView.addSubview(inputView)
-        bottomView.heightAnchor.constraint(equalTo: inputView.heightAnchor, constant: 20).isActive = true
+//        bottomView.heightAnchor.constraint(equalTo: inputView.heightAnchor, constant: 20).isActive = true
         
         inputView.translatesAutoresizingMaskIntoConstraints = false
         inputView.centerYAnchor.constraint(equalTo: bottomView.centerYAnchor).isActive = true
-        inputView.leadingAnchor.constraint(equalTo: bottomView.leadingAnchor, constant: 10).isActive = true
-        inputView.widthAnchor.constraint(equalTo: bottomView.widthAnchor, multiplier: 0.8).isActive = true
+        inputView.centerXAnchor.constraint(equalTo: bottomView.centerXAnchor).isActive = true
+        inputView.widthAnchor.constraint(equalTo: bottomView.widthAnchor).isActive = true
+        inputView.heightAnchor.constraint(equalTo: bottomView.heightAnchor).isActive = true
         inputView.placeholderAttributedString = NSAttributedString(
             string: "说点什么吧",
             attributes: [
                 NSAttributedString.Key.foregroundColor: NSColor(hex: 0xABABAD)])
+//
+//        bottomView.addSubview(sendButton)
+//        sendButton.translatesAutoresizingMaskIntoConstraints = false
+//        sendButton.centerYAnchor.constraint(equalTo: bottomView.centerYAnchor).isActive = true
+//        sendButton.trailingAnchor.constraint(equalTo: bottomView.trailingAnchor, constant: -10).isActive = true
+//        sendButton.widthAnchor.constraint(equalTo: bottomView.widthAnchor, multiplier: 0.115).isActive = true
+//        sendButton.heightAnchor.constraint(equalToConstant: 25).isActive = true
         
-        bottomView.addSubview(sendButton)
-        sendButton.translatesAutoresizingMaskIntoConstraints = false
-        sendButton.centerYAnchor.constraint(equalTo: bottomView.centerYAnchor).isActive = true
-        sendButton.trailingAnchor.constraint(equalTo: bottomView.trailingAnchor, constant: -10).isActive = true
-        sendButton.widthAnchor.constraint(equalTo: bottomView.widthAnchor, multiplier: 0.115).isActive = true
-        sendButton.heightAnchor.constraint(equalToConstant: 25).isActive = true
-        
-        sendButton.setLay(title: "发送", fontsize: 14, weight: .regular)
-        sendButton.backAction = {
-            self.sendClick()
-        }
+//        sendButton.setLay(title: "发送", fontsize: 14, weight: .regular)
+//        sendButton.backAction = {
+//            self.sendClick()
+//        }
     }
     
     func sendClick() {
