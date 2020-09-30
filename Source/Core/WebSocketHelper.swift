@@ -31,7 +31,7 @@ open class WebSocketHelper {
             }
         }
     }
-    var pingCount = 0
+    var localPing = 0
     
     public init() {
         
@@ -193,8 +193,8 @@ open class WebSocketHelper {
         }
         
         self.socket?.write(string: cmd, completion: {
-            print("\(self.pingCount) ping Success")
-            self.pingCount += 1
+            print("\(self.localPing) ping Success")
+            self.localPing += 1
         })
     }
     

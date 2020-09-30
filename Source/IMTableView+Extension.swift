@@ -164,6 +164,14 @@ extension IMTableView {
             receiveMessage(data: data)
         }
         
+        if type == "pong" {
+            pingCount = 0
+        }
+        
+        if type == "ready" {
+            historyFlag = true
+        }
+        
         return
     }
     
