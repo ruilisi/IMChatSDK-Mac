@@ -58,6 +58,7 @@ open class IMChatView: NSView {
         inputView.trailingAnchor.constraint(equalTo: bottomView.trailingAnchor).isActive = true
         inputView.topAnchor.constraint(equalTo: bottomView.topAnchor).isActive = true
         inputView.bottomAnchor.constraint(equalTo: bottomView.bottomAnchor).isActive = true
+        inputView.textView.delegate = self
         inputView.placeholderAttributedString = NSAttributedString(
             string: "说点什么吧",
             attributes: [
@@ -76,7 +77,7 @@ open class IMChatView: NSView {
 //        }
     }
     
-    func sendClick() {
+    func sendMessage() {
         if !inputView.string.isEmpty {
             messageTable.sendMessage(message: inputView.string)
             inputView.string = ""
@@ -101,5 +102,16 @@ public extension IMChatView {
         completeAction = onSuccess
         messageTable.errorAction = onFailer
         messageTable.build(config: config)
+    }
+}
+
+extension IMChatView: NSTextViewDelegate {
+    public func textView(_ textView: NSTextView, doCommandBy commandSelector: Selector) -> Bool {
+        
+        if commandSelector == #selector(NSStandardKeyBindingResponding.insertNewline(_:)) {
+            sendMessage()
+            return true
+        }
+        return false
     }
 }
