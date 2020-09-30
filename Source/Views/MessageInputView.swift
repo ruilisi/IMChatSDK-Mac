@@ -43,23 +43,15 @@ class MessageInputView: NSView {
         
         self.addSubview(scrollView)
         
-        textView.textColor = NSColor(hex: 0x333333)
-        textView.backgroundColor = NSColor(hex: 0xFCFDFF)
-        textView.focusRingType = .none     ///取消高亮
-        
-        textView.autoresizesSubviews = true
-        textView.wantsLayer = true
-        textView.layer?.cornerRadius = 2
-        
 //        scrollView.frame = CGRect(x: 0, y: 0, width: 500, height: 200)
         scrollView.translatesAutoresizingMaskIntoConstraints = false
-        scrollView.centerYAnchor.constraint(equalTo: self.centerYAnchor).isActive = true
-        scrollView.centerXAnchor.constraint(equalTo: self.centerXAnchor).isActive = true
-        scrollView.widthAnchor.constraint(equalTo: self.widthAnchor).isActive = true
-        scrollView.heightAnchor.constraint(equalTo: self.heightAnchor).isActive = true
+        scrollView.leadingAnchor.constraint(equalTo: self.leadingAnchor).isActive = true
+        scrollView.trailingAnchor.constraint(equalTo: self.trailingAnchor).isActive = true
+        scrollView.topAnchor.constraint(equalTo: self.topAnchor).isActive = true
+        scrollView.bottomAnchor.constraint(equalTo: self.bottomAnchor).isActive = true
         scrollView.documentView = textView
         
-        scrollView.hasHorizontalScroller = true
+        scrollView.hasHorizontalScroller = false
         textView.maxSize = NSMakeSize(.greatestFiniteMagnitude, .greatestFiniteMagnitude)
         textView.isHorizontallyResizable = true
         textView.textContainer?.widthTracksTextView = false
@@ -83,5 +75,15 @@ class WhiteInputView: NSTextView {
             
         }
         return flag
+    }
+}
+
+class OpaqueGridScroller: NSScroller {
+    override func draw(_ dirtyRect: NSRect) {
+        super.draw(dirtyRect)
+        NSColor.clear.setFill()
+        dirtyRect.fill()
+        // whatever style you want here for knob if you want
+        knobStyle = .dark
     }
 }

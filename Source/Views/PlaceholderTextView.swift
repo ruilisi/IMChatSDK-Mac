@@ -24,11 +24,10 @@ class PlaceholderTextView: NSTextView {
         
         self.textColor = NSColor(hex: 0x333333)
         self.backgroundColor = NSColor(hex: 0xFCFDFF)
+//        self.backgroundColor = .red
         self.focusRingType = .none     ///取消高亮
         
         self.autoresizesSubviews = true
-        self.wantsLayer = true
-        self.layer?.cornerRadius = 2
 //        delegate = self
     }
     

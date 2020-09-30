@@ -46,8 +46,6 @@ open class IMChatView: NSView {
         messageTable.topAnchor.constraint(equalTo: self.topAnchor).isActive = true
         messageTable.widthAnchor.constraint(equalTo: self.widthAnchor).isActive = true
         
-        bottomView.setBackgroundColor = NSColor(hex: 0xF0F4FA)
-        
         setBottomView()
     }
     
@@ -56,10 +54,10 @@ open class IMChatView: NSView {
 //        bottomView.heightAnchor.constraint(equalTo: inputView.heightAnchor, constant: 20).isActive = true
         
         inputView.translatesAutoresizingMaskIntoConstraints = false
-        inputView.centerYAnchor.constraint(equalTo: bottomView.centerYAnchor).isActive = true
-        inputView.centerXAnchor.constraint(equalTo: bottomView.centerXAnchor).isActive = true
-        inputView.widthAnchor.constraint(equalTo: bottomView.widthAnchor).isActive = true
-        inputView.heightAnchor.constraint(equalTo: bottomView.heightAnchor).isActive = true
+        inputView.leadingAnchor.constraint(equalTo: bottomView.leadingAnchor).isActive = true
+        inputView.trailingAnchor.constraint(equalTo: bottomView.trailingAnchor).isActive = true
+        inputView.topAnchor.constraint(equalTo: bottomView.topAnchor).isActive = true
+        inputView.bottomAnchor.constraint(equalTo: bottomView.bottomAnchor).isActive = true
         inputView.placeholderAttributedString = NSAttributedString(
             string: "说点什么吧",
             attributes: [
