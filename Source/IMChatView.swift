@@ -63,6 +63,7 @@ open class IMChatView: NSView {
             string: "说点什么吧",
             attributes: [
                 NSAttributedString.Key.foregroundColor: NSColor(hex: 0xABABAD)])
+        inputView.bgColor = NSColor(hex: 0xEBEBF0)
 //
 //        bottomView.addSubview(sendButton)
 //        sendButton.translatesAutoresizingMaskIntoConstraints = false

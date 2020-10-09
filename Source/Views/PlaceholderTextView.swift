@@ -23,12 +23,8 @@ class PlaceholderTextView: NSTextView {
     func setinit() {
         
         self.textColor = NSColor(hex: 0x333333)
-        self.backgroundColor = NSColor(hex: 0xFCFDFF)
-//        self.backgroundColor = .red
         self.focusRingType = .none     ///取消高亮
-        
         self.autoresizesSubviews = true
-//        delegate = self
     }
     
     override init(frame frameRect: NSRect, textContainer container: NSTextContainer?) {

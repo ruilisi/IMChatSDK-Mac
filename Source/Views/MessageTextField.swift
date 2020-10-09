@@ -14,7 +14,7 @@ class MessageTextField: NSTextField {
 
         // Drawing code here.
         self.textColor = NSColor(hex: 0x333333)
-        self.backgroundColor = NSColor(hex: 0xFCFDFF)
+        self.backgroundColor = NSColor(hex: 0xEBEBF0)
         self.focusRingType = .none     ///取消高亮
         self.autoresizesSubviews = true
         self.isBordered = false        ///无边框

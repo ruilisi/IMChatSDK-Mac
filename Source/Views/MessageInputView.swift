@@ -12,6 +12,16 @@ class MessageInputView: NSView {
     let scrollView = NSScrollView()
     let textView = PlaceholderTextView()
     
+    var bgColor: NSColor {
+        get {
+            return textView.backgroundColor
+        }
+
+        set {
+            textView.backgroundColor = newValue
+        }
+    }
+    
     var string: String {
         get {
             return textView.string
@@ -75,15 +85,5 @@ class WhiteInputView: NSTextView {
             
         }
         return flag
-    }
-}
-
-class OpaqueGridScroller: NSScroller {
-    override func draw(_ dirtyRect: NSRect) {
-        super.draw(dirtyRect)
-        NSColor.clear.setFill()
-        dirtyRect.fill()
-        // whatever style you want here for knob if you want
-        knobStyle = .dark
     }
 }
