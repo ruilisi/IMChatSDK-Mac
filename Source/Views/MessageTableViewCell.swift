@@ -13,7 +13,8 @@ class MessageTableViewCell: NSView {
     let label = NSLabel()
     let time = NSLabel()
     let bgimage = NSImageView()
-    let loadingLottie = AnimationView(name: "msgloading")
+    var anim: Animation? = nil
+    let loadingLottie = AnimationView()
     
     var timeInt = Int()
     var messageID = String()
@@ -25,6 +26,11 @@ class MessageTableViewCell: NSView {
     
     var sendEdge = NSEdgeInsets(top: 6, left: 6, bottom: 6, right: 6)
     var receiveEdge = NSEdgeInsets(top: 6, left: 6, bottom: 6, right: 6)
+    
+    var receiveColor: NSColor = .black
+    var sendColor: NSColor = .white
+    
+    var timeColor: NSColor = .black
     
     var rowHeight = CGFloat()
     
@@ -46,10 +52,10 @@ class MessageTableViewCell: NSView {
         loadingLottie.backgroundBehavior = .pauseAndRestore
         
         setBackgroundColor = .clear
-        time.textColor = NSColor(hex: 0x000000, alpha: 0.5)
         
         labelfont = NSFont.systemFont(ofSize: 14, weight: .regular)
         time.font = NSFont.systemFont(ofSize: 12, weight: .regular)
+        time.alphaValue = 0.5
         
         label.font = labelfont
     }
@@ -70,6 +76,11 @@ class MessageTableViewCell: NSView {
         timeInt = Int(timeInterval)
         label.stringValue = "\(message)"
         
+        if let lottie = anim {
+            loadingLottie.animation = lottie
+        } else {
+//            loadingLottie.animation = Animation.named("msgloading", bundle: Resources.bundle, subdirectory: nil, animationCache: nil)
+        }
         
         label.cell?.usesSingleLineMode = false
         label.cell?.wraps = true
@@ -94,6 +105,7 @@ class MessageTableViewCell: NSView {
         bgimage.heightAnchor.constraint(equalTo: label.heightAnchor, constant: 12).isActive = true
         
         if !isSelf {
+            label.textColor = receiveColor
             receiveBG?.resizingMode = .stretch
             receiveBG?.capInsets = receiveEdge
             bgimage.image = receiveBG
@@ -101,6 +113,7 @@ class MessageTableViewCell: NSView {
             label.textColor = NSColor(hex: 0x333333)
             bgimage.leftAnchor.constraint(equalTo: self.leftAnchor, constant: 10).isActive = true
         } else {
+            label.textColor = sendColor
             sendBG?.resizingMode = .stretch
             sendBG?.capInsets = sendEdge
             bgimage.image = sendBG
@@ -119,6 +132,7 @@ class MessageTableViewCell: NSView {
         
         if !ishideTime {
             addSubview(time)
+            time.textColor = timeColor
             time.stringValue = getTimeStringByCurrentDate(timeInterval: timeInterval)
             time.frame = CGRect(x: 0, y: bgimage.frame.height + 10.0, width: vWidth, height: 15)
             time.alignment = .center

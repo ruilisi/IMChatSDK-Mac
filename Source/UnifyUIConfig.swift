@@ -14,7 +14,6 @@ open class UnifyUIConfig {
     var textColor: NSColor?
     var bottomColor: NSColor?
     var textbgColor: NSColor?
-    var buttonColor: NSColor?
     var placeHolderColor: NSColor?
     var sendBG: NSImage?
     var sendEdge: NSEdgeInsets?
@@ -24,7 +23,6 @@ open class UnifyUIConfig {
     var sendTextColor: NSColor?
     var receiveTextColor: NSColor?
     var timeTextColor: NSColor?
-    var buttonText: String?
     var placeHolderText: String?
     var loadingLottie: Animation?
     
@@ -68,16 +66,6 @@ open class UnifyUIConfig {
      */
     public func setTextBGColor(color: NSColor) -> UnifyUIConfig {
         textbgColor = color
-        return self
-    }
-    
-    /**
-     设置按钮的颜色
-     - parameters:
-        - color: 按钮颜色
-     */
-    public func setButtonColor(color: NSColor) -> UnifyUIConfig {
-        buttonColor = color
         return self
     }
     
@@ -142,16 +130,6 @@ open class UnifyUIConfig {
      */
     public func setTimeTextColor(color: NSColor) -> UnifyUIConfig {
         timeTextColor = color
-        return self
-    }
-    
-    /**
-     设置发送按钮文字
-     - parameters:
-        - text: 按钮文字
-     */
-    public func setButtonText(text: String) -> UnifyUIConfig {
-        buttonText = text
         return self
     }
     

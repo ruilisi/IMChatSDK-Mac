@@ -15,6 +15,10 @@ open class IMChatView: NSView {
     let scView = NSScrollView()
     let sendButton = XButton()
     var bottomViewAnchor = NSLayoutConstraint()
+    var placeHolder: String = "说点什么吧"
+    
+    private var placeHoderColor: NSColor = .lightGray
+    private var textColor: NSColor = .white
     
     var completeAction: (() -> Void)? {
         get {
@@ -60,22 +64,10 @@ open class IMChatView: NSView {
         inputView.bottomAnchor.constraint(equalTo: bottomView.bottomAnchor).isActive = true
         inputView.textView.delegate = self
         inputView.placeholderAttributedString = NSAttributedString(
-            string: "说点什么吧",
+            string: placeHolder,
             attributes: [
                 NSAttributedString.Key.foregroundColor: NSColor(hex: 0xABABAD)])
         inputView.bgColor = NSColor(hex: 0xEBEBF0)
-//
-//        bottomView.addSubview(sendButton)
-//        sendButton.translatesAutoresizingMaskIntoConstraints = false
-//        sendButton.centerYAnchor.constraint(equalTo: bottomView.centerYAnchor).isActive = true
-//        sendButton.trailingAnchor.constraint(equalTo: bottomView.trailingAnchor, constant: -10).isActive = true
-//        sendButton.widthAnchor.constraint(equalTo: bottomView.widthAnchor, multiplier: 0.115).isActive = true
-//        sendButton.heightAnchor.constraint(equalToConstant: 25).isActive = true
-        
-//        sendButton.setLay(title: "发送", fontsize: 14, weight: .regular)
-//        sendButton.backAction = {
-//            self.sendClick()
-//        }
     }
     
     func sendMessage() {
@@ -103,6 +95,65 @@ public extension IMChatView {
         completeAction = onSuccess
         messageTable.errorAction = onFailer
         messageTable.build(config: config)
+    }
+    
+    
+    
+    /**
+     配置UI信息
+     - parameters:
+        - config: UI配置
+     */
+    func buildUI(config: UnifyUIConfig) {
+        
+        if config.backgroundColor != nil {
+            self.setBackgroundColor = config.backgroundColor
+        }
+        
+        if config.bottomColor != nil {
+            self.bottomView.setBackgroundColor = config.bottomColor
+        }
+        
+        if let color = config.textColor {
+            self.textColor = color
+        }
+        
+        if let color = config.placeHolderColor {
+//            self.textView.textColor = color
+            self.placeHoderColor = color
+        }
+        
+        if let color = config.textbgColor {
+            self.inputView.bgColor = color
+        }
+        
+        if let img = config.sendBG, let edge = config.sendEdge {
+            messageTable.setSendBG(img: img, edge: edge)
+        }
+        
+        if let img = config.receiveBG, let edge = config.receiveEdge {
+            messageTable.setReceiveBG(img: img, edge: edge)
+        }
+        
+        if let send = config.sendTextColor {
+            messageTable.setSendColor(color: send)
+        }
+        
+        if let receive = config.receiveTextColor {
+            messageTable.setReceiveColor(color: receive)
+        }
+        
+        if let color = config.timeTextColor {
+            messageTable.setTimeColor(color: color)
+        }
+        
+        if let text = config.placeHolderText {
+            placeHolder = text
+        }
+        
+        if let lottie = config.loadingLottie {
+            messageTable.setLottie(lottie: lottie)
+        }
     }
 }
 

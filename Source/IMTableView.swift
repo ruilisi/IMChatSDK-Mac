@@ -8,6 +8,7 @@
 import Cocoa
 import Starscream
 import SwiftyJSON
+import Lottie
 
 enum HistoryTimeInterval {
     case latest
@@ -35,7 +36,12 @@ class IMTableView: NSView {
     var receiveBG = NSImage(named: "bgReceive")
     var sendEdge = NSEdgeInsets(top: 6, left: 6, bottom: 6, right: 6)
     var receiveEdge = NSEdgeInsets(top: 6, left: 6, bottom: 6, right: 6)
-
+    
+    var sendColor: NSColor = .white
+    var receiveColor: NSColor = .black
+    var timeColor: NSColor = .black
+    var lottieanim: Animation? = nil
+    
     override func draw(_ dirtyRect: NSRect) {
         super.draw(dirtyRect)
 
@@ -143,6 +149,34 @@ class IMTableView: NSView {
         socket.delegate = self
     }
     
+    
+    
+    func setReceiveBG(img: NSImage?, edge: NSEdgeInsets) {
+        receiveBG = img
+        receiveEdge = edge
+    }
+    
+    func setSendBG(img: NSImage?, edge: NSEdgeInsets) {
+        sendBG = img
+        sendEdge = edge
+    }
+    
+    func setReceiveColor(color: NSColor) {
+        receiveColor = color
+    }
+    
+    func setSendColor(color: NSColor) {
+        sendColor = color
+    }
+    
+    func setTimeColor(color: NSColor) {
+        timeColor = color
+    }
+    
+    func setLottie(lottie: Animation) {
+        lottieanim = lottie
+    }
+    
     // MARK: 清空历史
     func cleanHistory() {
         HistoryDataAccess.historyData = []
@@ -160,16 +194,13 @@ extension IMTableView {
     
     // MARK: 插入行
     func insertRow(message: MessageModel, desc: Bool = false, send: Bool = false, needhide: Bool = true) {
-        let cell = MessageTableViewCell()
+        
         var timeinterval = TimeInterval(message.timeInterval / 1000)
         if message.timeInterval == 0 {
             timeinterval = Date().timeIntervalSince1970
         }
-
-        cell.sendEdge = sendEdge
-        cell.receiveEdge = receiveEdge
-        cell.sendBG = sendBG
-        cell.receiveBG = receiveBG
+        
+        let cell = configCell()
         
         DispatchQueue.main.async {
             let filcell = self.cells.filter {
@@ -210,6 +241,21 @@ extension IMTableView {
         } else {
             messageTable.scrollToBeginningOfDocument(self)
         }
+    }
+    
+    func configCell() -> MessageTableViewCell {
+        let cell = MessageTableViewCell()
+        
+        cell.sendEdge = sendEdge
+        cell.receiveEdge = receiveEdge
+        cell.sendBG = sendBG
+        cell.receiveBG = receiveBG
+        cell.sendColor = sendColor
+        cell.receiveColor = receiveColor
+        cell.timeColor = timeColor
+        cell.anim = lottieanim
+        
+        return cell
     }
     
     func needHide(timeInterval: Int, desc: Bool = false) -> Bool {
