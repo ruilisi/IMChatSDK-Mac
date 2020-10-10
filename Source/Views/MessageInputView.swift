@@ -11,6 +11,7 @@ class MessageInputView: NSView {
     
     let scrollView = NSScrollView()
     let textView = PlaceholderTextView()
+    let lineView = NSView()
     
     var bgColor: NSColor {
         get {
@@ -51,7 +52,15 @@ class MessageInputView: NSView {
     override init(frame frameRect: NSRect) {
         super.init(frame: frameRect)
         
+        self.addSubview(lineView)
         self.addSubview(scrollView)
+        
+        lineView.translatesAutoresizingMaskIntoConstraints = false
+        lineView.topAnchor.constraint(equalTo: self.topAnchor).isActive = true
+        lineView.centerXAnchor.constraint(equalTo: self.centerXAnchor).isActive = true
+        lineView.heightAnchor.constraint(equalToConstant: 2).isActive = true
+        lineView.widthAnchor.constraint(equalTo: self.widthAnchor).isActive = true
+        lineView.setBackgroundColor = NSColor(hex: 0xCCCCCC)
         
 //        scrollView.frame = CGRect(x: 0, y: 0, width: 500, height: 200)
         scrollView.automaticallyAdjustsContentInsets = false
@@ -59,7 +68,7 @@ class MessageInputView: NSView {
         scrollView.translatesAutoresizingMaskIntoConstraints = false
         scrollView.leadingAnchor.constraint(equalTo: self.leadingAnchor).isActive = true
         scrollView.trailingAnchor.constraint(equalTo: self.trailingAnchor).isActive = true
-        scrollView.topAnchor.constraint(equalTo: self.topAnchor).isActive = true
+        scrollView.topAnchor.constraint(equalTo: lineView.bottomAnchor).isActive = true
         scrollView.bottomAnchor.constraint(equalTo: self.bottomAnchor).isActive = true
         scrollView.documentView = textView
         scrollView.hasHorizontalScroller = false
