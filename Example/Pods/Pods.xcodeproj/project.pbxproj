@@ -47,6 +47,7 @@
 		2F73DF1A252351BA00403FD4 /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F73DF19252351BA00403FD4 /* Helper.swift */; };
 		2F73DF242524142E00403FD4 /* MessageInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F73DF232524142E00403FD4 /* MessageInputView.swift */; };
 		2FCFF0AB25218FF900B3B123 /* PlaceholderTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FCFF0AA25218FF900B3B123 /* PlaceholderTextView.swift */; };
+		2FF602802531DA10001A0A7B /* HttpRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FF6027F2531DA10001A0A7B /* HttpRequest.swift */; };
 		30D20357CEB65AE8B92DF999C26C2B4B /* AnimatorNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = E04EB77D80CCC8293CEA562485FD903E /* AnimatorNode.swift */; };
 		315E9F6C4FF49E90436137110C37AFC9 /* Animation.swift in Sources */ = {isa = PBXBuildFile; fileRef = C01EA716AEF9157C2B132E4D3D408151 /* Animation.swift */; };
 		31C5EB39E96E5010304FDA87E7E599C3 /* WebSocketServer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89928F3CEDD56B7A239CB71A7E3B2BB6 /* WebSocketServer.swift */; };
@@ -351,6 +352,7 @@
 		2F73DF232524142E00403FD4 /* MessageInputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageInputView.swift; sourceTree = "<group>"; };
 		2FA23764DED60893245D33EE6B55F384 /* Shape.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Shape.swift; path = "lottie-swift/src/Private/Model/ShapeItems/Shape.swift"; sourceTree = "<group>"; };
 		2FCFF0AA25218FF900B3B123 /* PlaceholderTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceholderTextView.swift; sourceTree = "<group>"; };
+		2FF6027F2531DA10001A0A7B /* HttpRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpRequest.swift; sourceTree = "<group>"; };
 		2FF95F1407B711E5B2E489A3AA0CD2F9 /* Pods-IMChatSDK-Mac_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-IMChatSDK-Mac_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		2FFAFE3F56FB483686A7FBDB156D6AB0 /* HttpUtil.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = HttpUtil.swift; sourceTree = "<group>"; };
 		3006287C8527114312CA900637C92BD9 /* IMChatSDK-Mac-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "IMChatSDK-Mac-Info.plist"; sourceTree = "<group>"; };
@@ -1008,6 +1010,7 @@
 			children = (
 				FD675B23EA7D53FDDCAC7A502CC19014 /* HttpManager.swift */,
 				2FFAFE3F56FB483686A7FBDB156D6AB0 /* HttpUtil.swift */,
+				2FF6027F2531DA10001A0A7B /* HttpRequest.swift */,
 			);
 			name = Http;
 			path = Source/Http;
@@ -1498,6 +1501,7 @@
 				949B3B280DE2E9D80FFEF578E15498DC /* HttpManager.swift in Sources */,
 				89C785BEF67C058573C54FD0D8E204A6 /* HttpUtil.swift in Sources */,
 				D4C243A39B60A03DA1AD0D0B351FEA39 /* IMChatSDK-Mac-dummy.m in Sources */,
+				2FF602802531DA10001A0A7B /* HttpRequest.swift in Sources */,
 				9C48BF4F2D3C9F6B99D3302D124A3B9C /* IMChatView.swift in Sources */,
 				5044B8886EE4DD0D0F66CD49BA55291F /* ImInfo.swift in Sources */,
 				2F73DF242524142E00403FD4 /* MessageInputView.swift in Sources */,
