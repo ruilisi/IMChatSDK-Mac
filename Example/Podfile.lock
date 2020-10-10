@@ -1,7 +1,5 @@
 PODS:
-  - Alamofire (4.8.0)
   - IMChatSDK-Mac (1.0.0):
-    - Alamofire (= 4.8.0)
     - lottie-ios
     - Starscream
     - SwiftyJSON
@@ -14,7 +12,6 @@ DEPENDENCIES:
 
 SPEC REPOS:
   trunk:
-    - Alamofire
     - lottie-ios
     - Starscream
     - SwiftyJSON
@@ -24,8 +21,7 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  Alamofire: 3ec537f71edc9804815215393ae2b1a8ea33a844
-  IMChatSDK-Mac: fee1588f67087cd882cae874de66ca90652c213a
+  IMChatSDK-Mac: 805fec574dc20b6ee0c0870b1d9cf0214f591998
   lottie-ios: 48fac6be217c76937e36e340e2d09cf7b10b7f5f
   Starscream: 5178aed56b316f13fa3bc55694e583d35dd414d9
   SwiftyJSON: 36413e04c44ee145039d332b4f4e2d3e8d6c4db7
